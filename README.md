@@ -146,6 +146,10 @@ Thêm vào `claude_desktop_config.json` và khởi động lại Claude Desktop.
 - [ ] Arkon CLI — thiết lập nhân viên một lệnh
 - [ ] Hệ thống thông báo cho yêu cầu xem xét nháp
 - [ ] Bảng phân tích sử dụng
+- [ ] SD: Review document: đọc doc và sinh ra các agents liên quan. Agents chat và trao đổi với nhau về các vấn đề của doc, đánh giá điểm dựa trên góc nhìn chuyên gia - bằng tiếng Việt
+- [ ] SD: Hỗ trợ soạn thảo văn bản
+- [ ] SD: Biến document thành slide
+- [ ] SD: Tự động convert document sang file md
 
 ---
 
@@ -157,8 +161,7 @@ Miễn phí sử dụng cho công cụ nội bộ, nghiên cứu, dự án cá n
 
 **Cần giấy phép thương mại hoặc tích hợp tùy chỉnh?** Chúng tôi hỗ trợ các tổ chức tích hợp Claude, AI agent tùy chỉnh và máy chủ MCP vào hạ tầng hiện có — từ kết nối cơ sở dữ liệu nội bộ và hệ thống kế thừa đến xây dựng agent chuyên biệt cho quy trình kinh doanh cụ thể.
 
-[Liên Hệ →](https://bitsness.vn)
+[Liên Hệ](https://sondo.top)
+sondn2010@gmail.com
 
 ---
-
-[![Star History Chart](https://api.star-history.com/svg?repos=nduckmink/arkon&type=Date)](https://star-history.com/#nduckmink/arkon&Date)

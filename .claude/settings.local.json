@@ -20,7 +20,17 @@
       "Bash(docker exec *)",
       "Bash(docker run *)",
       "Bash(docker image *)",
-      "Bash(curl *)"
+      "Bash(curl *)",
+      "mcp__MiniMax__understand_image",
+      "WebFetch(domain:platform.minimax.io)",
+      "WebSearch",
+      "Bash(rtk python *)",
+      "Bash(python -m py_compile app/ai/providers/base.py app/ai/providers/minimax_provider.py app/ai/registry.py app/services/config_service.py)",
+      "Bash(docker build *)",
+      "Bash(python -c \"from app.main import app; print\\('✓ Backend compiles'\\)\")",
+      "Bash(python -m py_compile app/main.py app/config.py app/mcp/server.py app/mcp/__init__.py app/mcp/resources.py app/mcp/tools.py app/__init__.py app/services/permissions.py app/routers/rbac.py)",
+      "Bash(python -m py_compile app/routers/guide.py)",
+      "Bash(git commit *)"
     ]
   }
 }
