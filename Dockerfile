@@ -20,6 +20,9 @@ COPY app/ ./app/
 COPY alembic/ ./alembic/
 COPY alembic.ini ./
 
+# Copy documentation for the help center
+COPY docs/ ./app/docs/
+
 COPY entrypoint.sh ./
 RUN chmod +x entrypoint.sh
 

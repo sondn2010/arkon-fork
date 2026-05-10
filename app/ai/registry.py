@@ -47,6 +47,9 @@ def _get_embedding_class(provider: ProviderType) -> type[EmbeddingProvider]:
     elif provider == ProviderType.OPENAI:
         from app.ai.providers.openai_provider import OpenAIEmbedding
         return OpenAIEmbedding
+    elif provider == ProviderType.MINIMAX:
+        from app.ai.providers.minimax_provider import MiniMaxEmbedding
+        return MiniMaxEmbedding
     raise ValueError(f"Unsupported embedding provider: {provider}")
 
 
@@ -60,6 +63,9 @@ def _get_llm_class(provider: ProviderType) -> type[LLMProvider]:
     elif provider == ProviderType.ANTHROPIC:
         from app.ai.providers.anthropic_provider import AnthropicLLM
         return AnthropicLLM
+    elif provider == ProviderType.MINIMAX:
+        from app.ai.providers.minimax_provider import MiniMaxLLM
+        return MiniMaxLLM
     raise ValueError(f"Unsupported LLM provider: {provider}")
 
 
@@ -70,6 +76,9 @@ def _get_vision_class(provider: ProviderType) -> type[VisionProvider]:
     elif provider == ProviderType.OPENAI:
         from app.ai.providers.openai_provider import OpenAIVision
         return OpenAIVision
+    elif provider == ProviderType.MINIMAX:
+        from app.ai.providers.minimax_provider import MiniMaxVision
+        return MiniMaxVision
     raise ValueError(f"Unsupported vision provider: {provider}")
 
 
@@ -259,6 +268,9 @@ SUPPORTED_PROVIDERS = {
         {"id": "openai", "name": "OpenAI", "models": [
             "text-embedding-3-small", "text-embedding-3-large", "text-embedding-ada-002",
         ]},
+        {"id": "minimax", "name": "MiniMax", "models": [
+            "fallback to openai",
+        ], "note": "No embedding — uses fallback"},
     ],
     "llm": [
         {"id": "google", "name": "Google Gemini", "models": [
@@ -270,6 +282,11 @@ SUPPORTED_PROVIDERS = {
         {"id": "anthropic", "name": "Anthropic", "models": [
             "claude-sonnet-4-20250514", "claude-haiku-4-20250514",
         ]},
+        {"id": "minimax", "name": "MiniMax", "models": [
+            "MiniMax-M2.7", "MiniMax-M2.7-highspeed",
+            "MiniMax-M2.5", "MiniMax-M2.5-highspeed",
+            "MiniMax-M2-her",
+        ]},
     ],
     "vision": [
         {"id": "google", "name": "Google Gemini", "models": [
@@ -278,5 +295,8 @@ SUPPORTED_PROVIDERS = {
         {"id": "openai", "name": "OpenAI", "models": [
             "gpt-4o", "gpt-4o-mini",
         ]},
+        {"id": "minimax", "name": "MiniMax", "models": [
+            "fallback to openai",
+        ], "note": "No vision — uses fallback"},
     ],
 }

@@ -259,6 +259,135 @@ The same tools and permission scoping apply.
 
 ---
 
+## Claude Code
+
+Claude Code (claude.ai/code) supports MCP servers via the `--mcp` flag or `CLAUDE.md` configuration.
+
+### Option 1 — Via `CLAUDE.md`
+
+In your project root, create or update `CLAUDE.md`:
+
+```markdown
+# MCP servers
+server: arkon
+url: https://your-arkon-server/mcp
+headers:
+  Authorization: Bearer ark_xxxxxxxxxxxxxxxxxxxx
+```
+
+### Option 2 — Via CLI flag
+
+```bash
+claude --mcp arkon=https://your-arkon-server/mcp \
+       --mcp-header "Authorization: Bearer ark_xxxxxxxxxxxxxxxxxxxx"
+```
+
+### Option 3 — Persistent MCP config
+
+Create `~/.claude/mcp_servers.json`:
+
+```json
+{
+  "servers": {
+    "arkon": {
+      "url": "https://your-arkon-server/mcp",
+      "headers": {
+        "Authorization": "Bearer ark_xxxxxxxxxxxxxxxxxxxx"
+      }
+    }
+  }
+}
+```
+
+### Available tools
+
+All Tier 1 read tools are available. Workspace contributors can use Tier 2-4 tools per their role.
+
+| Tool | Use |
+|---|---|
+| `search_wiki` | Find relevant wiki pages |
+| `read_wiki_page` | Read full page content |
+| `list_wiki_pages` | Browse by type/knowledge category |
+| `list_sources` | Browse source documents |
+| `get_source_outline` | Get document TOC |
+| `get_source_pages` | Extract raw page text |
+
+---
+
+## Codex
+
+Codex (codex.ai) is Anthropic's AI coding assistant. It connects to MCP servers via the Claude API adapter.
+
+### Setup
+
+1. Get an MCP token from the Admin Portal (**Employees → [you] → Generate Token**)
+2. In Codex settings, add a custom MCP endpoint:
+
+```
+Endpoint: https://your-arkon-server/mcp
+Header: Authorization: Bearer ark_xxxxxxxxxxxxxxxxxxxx
+```
+
+### Available tools
+
+Codex has access to the full Tier 1 tool set. Workspace contributors can also use `propose_wiki_edit` to suggest changes to wiki pages from within their coding workflow.
+
+---
+
+## Cursor
+
+Cursor is a code editor with built-in AI. It supports MCP servers via the `~/.cursor/mcp_servers.json` config file.
+
+### Setup
+
+```bash
+mkdir -p ~/.cursor
+```
+
+Create `~/.cursor/mcp_servers.json`:
+
+```json
+{
+  "arkon": {
+    "url": "https://your-arkon-server/mcp",
+    "headers": {
+      "Authorization": "Bearer ark_xxxxxxxxxxxxxxxxxxxx"
+    }
+  }
+}
+```
+
+Restart Cursor. The Arkon tools appear in the Composer or Chat panel.
+
+### Available tools
+
+| Tool | Use |
+|---|---|
+| `search_wiki` | Search SOPs, runbooks, architecture docs |
+| `read_wiki_page` | Read a specific page |
+| `list_knowledge_types` | Browse available knowledge categories |
+
+---
+
+## Windsurf
+
+Windsurf is an AI-powered IDE from Codeium. It connects to MCP servers via the Windsurf Settings → MCP panel.
+
+### Setup
+
+1. Open Windsurf → Settings → MCP Servers
+2. Click "Add Server"
+3. Fill in:
+   - **Name:** `arkon`
+   - **URL:** `https://your-arkon-server/mcp`
+   - **Headers:** `Authorization: Bearer ark_xxxxxxxxxxxxxxxxxxxx`
+
+### Available tools
+
+Windsurf has access to the full Tier 1 read tool set. Workspace editors can also use `propose_wiki_edit` and `edit_wiki_page` to update wiki pages directly from the editor.
+
+---
+
 ## Example conversation
 
 ```

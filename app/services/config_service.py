@@ -57,10 +57,11 @@ ALL_CONFIG_KEYS = [
     ACTIVE_EMBEDDING_MODEL_KEY,  # canonical spec_id, e.g. "openai/text-embedding-3-small"
     "embedding_api_key__google",
     "embedding_api_key__openai",
+    "embedding_api_key__minimax",
     "embedding_base_url",        # optional, custom endpoint (Ollama, Azure, proxy)
 
     # --- LLM provider (for summarization, webhook gateway) ---
-    "llm_provider",             # "google" | "openai" | "anthropic" | "ollama"
+    "llm_provider",             # "google" | "openai" | "anthropic" | "ollama" | "minimax"
     "llm_model_id",             # e.g. "gpt-4o-mini", "claude-sonnet-4-20250514"
     "llm_api_key",              # Provider API key
     "llm_base_url",             # Custom endpoint
