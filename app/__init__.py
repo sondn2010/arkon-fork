@@ -1,1 +1,1 @@
-"""Arkon — Enterprise AI Control Center"""
+"""Snapper — Enterprise AI Control Center"""

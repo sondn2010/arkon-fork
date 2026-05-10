@@ -70,7 +70,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    const token = localStorage.getItem("arkon_token");
+    const token = localStorage.getItem("snapper_token");
     if (token) {
       refresh();
     } else {

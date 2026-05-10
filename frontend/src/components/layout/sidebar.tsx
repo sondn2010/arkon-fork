@@ -45,7 +45,7 @@ const navSections: NavSection[] = [
     id: "org-knowledge",
     label: "Org Knowledge",
     items: [
-      { label: "Documents", href: "/knowledge", icon: "description", requiredPermissions: ["doc:read:own_dept", "doc:read:all"] },
+      { label: "Help Center", href: "/guide", icon: "help", requiredPermissions: undefined },
       { label: "Wiki", href: "/wiki", icon: "auto_stories", requiredPermissions: ["wiki:read:own_dept", "wiki:read:all"] },
       { label: "AI Skills", href: "/skills", icon: "bolt", requiredPermissions: ["skill:read:own_dept", "skill:read:all"] },
     ],
@@ -322,14 +322,14 @@ function OrgHeader({
         <DropdownMenuTrigger className="flex items-center gap-2.5 rounded-md px-1.5 py-1.5 hover:bg-black/[0.03] transition-colors cursor-pointer min-w-0 w-full">
           <Image
             src="/logo.png"
-            alt="Arkon"
+            alt="Snapper"
             width={24}
             height={24}
             className="shrink-0 rounded-[4px]"
           />
           <div className="flex flex-col items-start min-w-0">
             <span className="text-[15px] font-semibold text-primary truncate leading-tight font-heading">
-              Arkon
+              Snapper
             </span>
             {user && (
               <span className="text-[10px] text-muted-foreground/70 truncate leading-tight">

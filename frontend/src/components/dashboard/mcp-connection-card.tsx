@@ -8,7 +8,7 @@ export function McpConnectionCard() {
 
   const configSnippet = `{
   "mcpServers": {
-    "arkon": {
+    "snapper": {
       "url": "${typeof window !== "undefined" ? window.location.origin : "https://your-server"}/mcp",
       "headers": {
         "Authorization": "Bearer <your-mcp-token>"
@@ -29,7 +29,7 @@ export function McpConnectionCard() {
         MCP Connection
       </h3>
       <p className="text-xs text-muted-foreground mb-4">
-        Connect Claude Desktop to Arkon with this config snippet.
+        Connect Claude Desktop to Snapper with this config snippet.
       </p>
 
       <div className="bg-[#1f2937] rounded-lg p-4 font-mono text-xs text-[#e8f4ff] overflow-x-auto">

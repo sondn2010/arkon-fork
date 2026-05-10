@@ -4,7 +4,7 @@ import { AuthProvider } from "@/lib/auth";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Arkon - Knowledge Base Center",
+  title: "Snapper - Knowledge Base Center",
   description:
     "Centralized knowledge management and access control for Claude ecosystem",
 };

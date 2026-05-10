@@ -5,7 +5,7 @@ x-backend: &backend
   build:
     context: .
     dockerfile: Dockerfile
-  image: arkon-backend:latest
+  image: snapper-backend:latest
   env_file: [.env.docker]
   restart: always
   depends_on:
@@ -21,7 +21,7 @@ services:
 
   postgres:
     image: pgvector/pgvector:pg16
-    container_name: arkon_postgres
+    container_name: snapper_postgres
     restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
@@ -39,7 +39,7 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: arkon_redis
+    container_name: snapper_redis
     restart: always
     command: redis-server --save 60 1 --loglevel warning
     volumes:
@@ -54,14 +54,18 @@ services:
 
   minio:
     image: minio/minio:latest
-    container_name: arkon_minio
+    container_name: snapper_minio
     restart: always
     command: server /data --console-address ":9001"
     environment:
       MINIO_ROOT_USER: ${MINIO_ACCESS_KEY}
       MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY}
+      # Storage optimization
+      MINIO_STORAGE_CLASS_STANDARD: EC:0
     volumes:
       - minio_data:/data
+      # Optionally mount a custom config file:
+      # - ./minio-config.json:/etc/minio/config.json:ro
     ports:
       - "9000:9000"
       - "9001:9001"
@@ -70,12 +74,17 @@ services:
       interval: 10s
       timeout: 5s
       retries: 10
+    # Resource limits (optional)
+    # deploy:
+    #   resources:
+    #     limits:
+    #       memory: 2G
 
   # ── Application ───────────────────────────────────────────────
 
   api:
     <<: *backend
-    container_name: arkon_api
+    container_name: snapper_api
     entrypoint: []
     ports:
       - "5055:5055"
@@ -90,7 +99,7 @@ services:
 
   worker:
     <<: *backend
-    container_name: arkon_worker
+    container_name: snapper_worker
     entrypoint: []
     command: python -m arq app.worker.WorkerSettings
     depends_on:
@@ -99,7 +108,7 @@ services:
 
   worker_skills:
     <<: *backend
-    container_name: arkon_worker_skills
+    container_name: snapper_worker_skills
     entrypoint: []
     command: python -m arq app.worker.SkillWorkerSettings
     depends_on:
@@ -112,8 +121,8 @@ services:
       dockerfile: Dockerfile
       args:
         NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:5055}
-    image: arkon-frontend:latest
-    container_name: arkon_frontend
+    image: snapper-frontend:latest
+    container_name: snapper_frontend
     restart: always
     ports:
       - "3119:3000"

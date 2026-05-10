@@ -1,5 +1,5 @@
 """
-Arkon MCP Resources — static/semi-static data exposed to Claude.
+Snapper MCP Resources — static/semi-static data exposed to Claude.
 
 Resources provide context Claude can read at session start without calling a tool.
 """
@@ -11,12 +11,12 @@ from loguru import logger
 def register_resources(mcp: FastMCP):
     """Register MCP resources on the server."""
 
-    @mcp.resource("arkon://about")
-    async def about_arkon() -> str:
-        """About this Arkon instance — capabilities and instructions."""
+    @mcp.resource("snapper://about")
+    async def about_snapper() -> str:
+        """About this Snapper instance — capabilities and instructions."""
         return (
-            "# Arkon Knowledge Base\n\n"
-            "You are connected to an Arkon enterprise LLM Wiki. Knowledge is organized "
+            "# Snapper Knowledge Base\n\n"
+            "You are connected to an Snapper enterprise LLM Wiki. Knowledge is organized "
             "as interlinked markdown wiki pages, compiled from source documents by an "
             "LLM and kept up to date over time. Wiki pages contain the synthesis; raw "
             "sources are available for precise citations.\n\n"
@@ -39,7 +39,7 @@ def register_resources(mcp: FastMCP):
             "3. Cite slugs for wiki facts, source IDs (and page numbers) for raw quotes\n"
         )
 
-    @mcp.resource("arkon://wiki-index")
+    @mcp.resource("snapper://wiki-index")
     async def wiki_index_resource() -> str:
         """Current wiki catalog — same content as the `read_wiki_index` tool."""
         from app.database import async_session_factory

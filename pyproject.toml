@@ -1,9 +1,9 @@
 [project]
-name = "arkon"
+name = "snapper"
 version = "0.1.0"
 description = "Enterprise AI Control Center — Knowledge Base & Skill Management for Claude"
 authors = [
-    {name = "Arkon Team"}
+    {name = "Snapper Team"}
 ]
 readme = "README.md"
 requires-python = ">=3.11,<3.15"

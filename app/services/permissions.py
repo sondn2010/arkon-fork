@@ -1,5 +1,5 @@
 """
-Permission constants for Arkon's dual-realm RBAC system.
+Permission constants for Snapper's dual-realm RBAC system.
 
 Format: {resource}:{action}:{scope}
   - scope = "own_dept" → only own department + global resources

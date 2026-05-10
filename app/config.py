@@ -18,7 +18,7 @@ class Settings(BaseSettings):
 
     # --- Database ---
     database_url: str = Field(
-        default="postgresql+asyncpg://arkon:arkon_secret@localhost:5432/arkon",
+        default="postgresql+asyncpg://snapper:snapper_secret@localhost:5432/snapper",
         description="PostgreSQL connection string (async)",
     )
 
@@ -28,7 +28,7 @@ class Settings(BaseSettings):
         description="Secret key for signing JWT tokens and encrypting config values",
     )
     default_admin_email: str = Field(
-        default="admin@arkon.local",
+        default="admin@snapper.local",
         description="Email for the initial admin account (created on first startup)",
     )
     default_admin_password: str = Field(
@@ -46,7 +46,7 @@ class Settings(BaseSettings):
     )
     minio_access_key: str = Field(default="minioadmin")
     minio_secret_key: str = Field(default="minioadmin123")
-    minio_bucket: str = Field(default="arkon-files")
+    minio_bucket: str = Field(default="snapper-files")
     minio_secure: bool = Field(default=False)
     minio_presign_expiry_hours: int = Field(default=24)
 

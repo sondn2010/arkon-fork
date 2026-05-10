@@ -1,5 +1,5 @@
 """
-Arkon — Enterprise AI Control Center.
+Snapper — Enterprise AI Control Center.
 FastAPI application entry point.
 """
 
@@ -59,7 +59,7 @@ async def seed_default_admin():
 async def lifespan(app: FastAPI):
     """Startup & shutdown logic (composed with FastMCP lifespan)."""
     async with mcp_http_app.lifespan(app):
-        logger.info("Starting Arkon API...")
+        logger.info("Starting Snapper API...")
 
         # Ensure MinIO bucket exists
         try:
@@ -79,15 +79,15 @@ async def lifespan(app: FastAPI):
             logger.warning("⚠️  DEFAULT_ADMIN_PASSWORD is 'admin123' — change the admin password after first login!")
 
         # MCP server ready
-        logger.success("Arkon MCP Server ready at /mcp")
-        logger.success("Arkon API started successfully")
+        logger.success("Snapper MCP Server ready at /mcp")
+        logger.success("Snapper API started successfully")
         yield
 
-        logger.info("Arkon API shutdown complete")
+        logger.info("Snapper API shutdown complete")
 
 
 app = FastAPI(
-    title="Arkon API",
+    title="Snapper API",
     description="Enterprise AI Control Center — Knowledge Base & Skill Management",
     version="0.1.0",
     lifespan=lifespan,
@@ -113,6 +113,7 @@ from app.routers import (  # noqa: E402
     admin_settings,
     audit,
     auth,
+    guide,
     knowledge_types,
     notes,
     projects,
@@ -125,6 +126,7 @@ from app.routers import (  # noqa: E402
     wiki_images,
 )
 
+app.include_router(guide.router, prefix="/api", tags=["guide"])
 app.include_router(auth.router, prefix="/api", tags=["auth"])
 app.include_router(sources.router, prefix="/api", tags=["sources"])
 app.include_router(notes.router, prefix="/api", tags=["notes"])
@@ -144,7 +146,7 @@ app.include_router(skills.router, prefix="/api", tags=["skills"])
 @app.get("/")
 async def root():
     return {
-        "name": "Arkon",
+        "name": "Snapper",
         "description": "Enterprise AI Control Center",
         "version": "0.1.0",
         "mcp_endpoint": "/mcp",

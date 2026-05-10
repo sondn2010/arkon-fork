@@ -36,9 +36,9 @@ export default function LoginPage() {
         {/* Brand */}
         <div className="text-center mb-10">
           <div className="flex items-center justify-center gap-3 mb-3">
-            <Image src="/logo.png" alt="Arkon" width={40} height={40} className="rounded-[6px]" />
+            <Image src="/logo.png" alt="Snapper" width={40} height={40} className="rounded-[6px]" />
             <h1 className="text-5xl tracking-tight text-foreground font-heading" style={{ letterSpacing: '-0.02em' }}>
-              Arkon
+              Snapper
             </h1>
           </div>
           <p className="text-muted-foreground text-sm">
@@ -58,7 +58,7 @@ export default function LoginPage() {
               <Input
                 id="email"
                 type="email"
-                placeholder="admin@arkon.local"
+                placeholder="admin@snapper.local"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -108,7 +108,7 @@ export default function LoginPage() {
         </div>
 
         <p className="text-center text-xs text-muted-foreground mt-6">
-          Arkon — On-Premise Deployment
+          Snapper — On-Premise Deployment
         </p>
       </div>
     </div>

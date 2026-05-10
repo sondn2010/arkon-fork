@@ -1,22 +1,22 @@
 """
-Arkon MCP Server — exposes Knowledge Base tools to Claude.
+Snapper MCP Server — exposes Knowledge Base tools to Claude.
 
 This module creates a FastMCP server that can be mounted into the
 main FastAPI app. Claude Desktop connects to /mcp and receives
 tools to search knowledge, retrieve documents, list categories, etc.
 
 Architecture:
-    Claude Desktop → MCP (HTTPS) → /mcp endpoint → Arkon KB tools
+    Claude Desktop → MCP (HTTPS) → /mcp endpoint → Snapper KB tools
                                                    → PostgreSQL (pgvector)
                                                    → Neo4j (graph)
                                                    → MinIO (files)
 
 Connection:
-    Employee runs: arkon connect --server https://ai.company.internal --token <token>
+    Employee runs: snapper connect --server https://ai.company.internal --token <token>
     This adds to Claude Desktop config:
     {
         "mcpServers": {
-            "arkon": {
+            "snapper": {
                 "url": "https://ai.company.internal/mcp",
                 "headers": {"Authorization": "Bearer <token>"}
             }
@@ -32,13 +32,13 @@ from app.mcp.tools import register_tools
 
 def create_mcp_server() -> FastMCP:
     """
-    Create and configure the Arkon MCP server.
+    Create and configure the Snapper MCP server.
     Call this once during app startup.
     """
     mcp = FastMCP(
-        "Arkon",
+        "Snapper",
         instructions=(
-            "You are connected to Arkon — an enterprise LLM Wiki. "
+            "You are connected to Snapper — an enterprise LLM Wiki. "
             "Knowledge is organized as interlinked markdown wiki pages compiled from "
             "source documents. Start with `search_wiki` or `read_wiki_index` for most "
             "questions; the wiki already synthesizes information across many sources, "

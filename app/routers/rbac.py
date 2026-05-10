@@ -318,7 +318,7 @@ async def generate_mcp_token(
         employee_name=emp.name,
         instructions=(
             f"Add this to Claude Desktop config:\n"
-            f'{{"mcpServers": {{"arkon": {{"url": "https://your-server/mcp", '
+            f'{{"mcpServers": {{"snapper": {{"url": "https://your-server/mcp", '
             f'"headers": {{"Authorization": "Bearer {token}"}}}}}}}}'
         ),
     )
@@ -363,7 +363,7 @@ async def get_my_mcp_token(
         employee_name=current_user.name,
         instructions=(
             f"Add this to Claude Desktop config:\n"
-            f'{{"mcpServers": {{"arkon": {{"url": "https://your-server/mcp", '
+            f'{{"mcpServers": {{"snapper": {{"url": "https://your-server/mcp", '
             f'"headers": {{"Authorization": "Bearer {token}"}}}}}}}}'
         ),
     )
