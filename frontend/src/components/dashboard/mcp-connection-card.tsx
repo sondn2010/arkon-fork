@@ -24,7 +24,7 @@ export function McpConnectionCard() {
   };
 
   return (
-    <div className="bg-surface-variant rounded-xl p-6 border border-border">
+    <div className="bg-surface-variant rounded-xl p-6 ">
       <h3 className="text-xl tracking-tight text-foreground mb-2">
         MCP Connection
       </h3>
@@ -32,7 +32,7 @@ export function McpConnectionCard() {
         Connect Claude Desktop to Arkon with this config snippet.
       </p>
 
-      <div className="bg-[#3a302a] rounded-lg p-4 font-mono text-xs text-[#faf5ee] overflow-x-auto">
+      <div className="bg-[#1f2937] rounded-lg p-4 font-mono text-xs text-[#e8f4ff] overflow-x-auto">
         <pre>{configSnippet}</pre>
       </div>
 

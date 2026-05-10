@@ -78,7 +78,7 @@ export default function WikiIndexPage() {
             >
               <span className="material-symbols-outlined text-base">search</span>
               Search
-              <kbd className="hidden sm:inline-block ml-1 px-1.5 py-0.5 rounded border border-border text-xs font-mono text-muted-foreground">
+              <kbd className="hidden sm:inline-block ml-1 px-1.5 py-0.5 rounded  text-xs font-mono text-muted-foreground">
                 ⌘K
               </kbd>
             </Button>
@@ -110,7 +110,7 @@ export default function WikiIndexPage() {
               {/* Stats bar */}
               {totalPages > 0 && (
                 <div className="flex flex-wrap items-center gap-3 mb-8">
-                  <div className="flex items-center gap-2 bg-card border border-border rounded-xl px-4 py-2.5 shadow-sahara">
+                  <div className="flex items-center gap-2 bg-card  rounded-xl px-4 py-2.5 shadow-ambient">
                     <span className="material-symbols-outlined text-base text-primary">article</span>
                     <span className="text-sm font-semibold text-foreground">{totalPages}</span>
                     <span className="text-xs text-muted-foreground">Pages</span>
@@ -118,14 +118,14 @@ export default function WikiIndexPage() {
                   {Object.entries(typeCounts).sort((a, b) => b[1] - a[1]).map(([type, count]) => (
                     <div
                       key={type}
-                      className="flex items-center gap-1.5 bg-card border border-border rounded-xl px-3 py-2.5 shadow-sahara"
+                      className="flex items-center gap-1.5 bg-card  rounded-xl px-3 py-2.5 shadow-ambient"
                     >
                       <WikiTypeBadge type={type} />
                       <span className="text-xs text-muted-foreground tabular-nums">{count}</span>
                     </div>
                   ))}
                   {lastUpdated && (
-                    <div className="flex items-center gap-2 bg-card border border-border rounded-xl px-4 py-2.5 shadow-sahara ml-auto">
+                    <div className="flex items-center gap-2 bg-card  rounded-xl px-4 py-2.5 shadow-ambient ml-auto">
                       <span className="material-symbols-outlined text-base text-muted-foreground">schedule</span>
                       <span className="text-xs text-muted-foreground">
                         Updated {new Date(lastUpdated).toLocaleDateString("en-US", {
@@ -174,7 +174,7 @@ export default function WikiIndexPage() {
                       <Link
                         key={page.slug}
                         href={`/wiki/${page.slug}`}
-                        className="group block bg-card border border-border rounded-xl p-4 hover:border-primary/40 hover:shadow-sahara transition-all"
+                        className="group block bg-card  rounded-xl p-4 hover:border-primary/40 hover:shadow-ambient transition-all"
                       >
                         <div className="flex items-start justify-between gap-2 mb-2">
                           <div className="flex items-center gap-1.5 flex-wrap">

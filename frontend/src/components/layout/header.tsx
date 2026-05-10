@@ -22,7 +22,7 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-30 bg-background/95 backdrop-blur-sm border-b border-border h-14 flex items-center justify-end px-6">
+    <header className="sticky top-0 z-30 bg-background/80 backdrop-blur-[20px] h-14 flex items-center justify-end px-6">
         {/* Spacer */}
         <div />
 

@@ -7,12 +7,12 @@ type StatCardProps = {
 
 export function StatCard({ label, value, icon, subtitle }: StatCardProps) {
   return (
-    <div className="bg-card rounded-xl p-5 border border-border shadow-sahara flex flex-col gap-3">
+    <div className="bg-card rounded-xl p-5  shadow-ambient flex flex-col gap-3">
       <div className="flex items-center justify-between">
         <span className="text-muted-foreground text-sm font-medium">
           {label}
         </span>
-        <span className="material-symbols-outlined text-primary-foreground bg-[var(--sahara-container)] p-2 rounded-lg text-base">
+        <span className="material-symbols-outlined text-primary bg-primary/15 p-2 rounded-lg text-base">
           {icon}
         </span>
       </div>

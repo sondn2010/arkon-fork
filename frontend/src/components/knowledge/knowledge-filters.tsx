@@ -34,7 +34,7 @@ export function KnowledgeFilters({
   return (
     <div className="flex flex-col gap-4">
       {/* Knowledge Type filter */}
-      <div className="bg-card rounded-xl p-5 border border-border shadow-sahara">
+      <div className="bg-card rounded-xl p-5  shadow-ambient">
         <h4 className="text-sm font-semibold text-foreground mb-3">
           Knowledge Type
         </h4>
@@ -60,7 +60,7 @@ export function KnowledgeFilters({
 
       {/* Department filter */}
       {departments.length > 0 && (
-        <div className="bg-card rounded-xl p-5 border border-border shadow-sahara">
+        <div className="bg-card rounded-xl p-5  shadow-ambient">
           <h4 className="text-sm font-semibold text-foreground mb-3">
             Department
           </h4>

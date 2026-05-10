@@ -59,7 +59,7 @@ export default function ProfilePage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Profile Info */}
-        <div className="bg-card rounded-xl p-6 border border-border shadow-sahara">
+        <div className="bg-card rounded-xl p-6  shadow-ambient">
           <h3 className="text-lg font-semibold text-foreground mb-4">
             Account Information
           </h3>
@@ -91,7 +91,7 @@ export default function ProfilePage() {
         </div>
 
         {/* Change Password */}
-        <div className="bg-card rounded-xl p-6 border border-border shadow-sahara">
+        <div className="bg-card rounded-xl p-6  shadow-ambient">
           <h3 className="text-lg font-semibold text-foreground mb-4">
             Change Password
           </h3>

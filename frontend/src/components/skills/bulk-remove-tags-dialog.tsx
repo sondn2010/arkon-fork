@@ -101,7 +101,7 @@ export function BulkRemoveTagsDialog({
           <Label>Selected Tags to Remove</Label>
           <div 
             className={cn(
-              "flex flex-wrap gap-1.5 p-2 min-h-[42px] border border-border rounded-md bg-secondary/5 transition-all cursor-text",
+              "flex flex-wrap gap-1.5 p-2 min-h-[42px]  rounded-md bg-secondary/5 transition-all cursor-text",
               "focus-within:border-destructive focus-within:ring-1 focus-within:ring-destructive/20 focus-within:bg-background"
             )}
             onClick={() => inputRef.current?.focus()}
@@ -134,7 +134,7 @@ export function BulkRemoveTagsDialog({
 
           {/* Suggestions Dropdown */}
           {filteredSuggestions.length > 0 && (
-            <div className="mt-2 flex flex-wrap gap-1 max-h-[120px] overflow-y-auto p-1 border border-border rounded-md">
+            <div className="mt-2 flex flex-wrap gap-1 max-h-[120px] overflow-y-auto p-1  rounded-md">
               {filteredSuggestions.map(t => (
                 <Badge
                   key={t}

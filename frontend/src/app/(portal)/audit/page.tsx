@@ -71,7 +71,7 @@ export default function AuditPage() {
 
         {/* Pagination Controls */}
         {totalPages > 1 && (
-          <div className="flex items-center justify-between bg-card rounded-xl border border-border px-4 py-3">
+          <div className="flex items-center justify-between bg-card rounded-xl  px-4 py-3">
             <span className="text-sm text-muted-foreground">
               Page {page} of {totalPages}
             </span>

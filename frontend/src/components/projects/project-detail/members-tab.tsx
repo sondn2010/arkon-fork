@@ -112,7 +112,7 @@ export function MembersTab({
   return (
     <div className="flex flex-col gap-4">
       {isAdmin && (
-        <div className="bg-card rounded-xl border border-border shadow-sahara p-4 flex gap-2">
+        <div className="bg-card rounded-xl  shadow-ambient p-4 flex gap-2">
           <Select value={selectedEmpId} onValueChange={(v) => setSelectedEmpId(v ?? "")}>
             <SelectTrigger className="bg-background flex-1">
               {selectedEmpId ? (
@@ -145,7 +145,7 @@ export function MembersTab({
       )}
 
       {members.length === 0 ? (
-        <div className="bg-card rounded-xl border border-border shadow-sahara">
+        <div className="bg-card rounded-xl  shadow-ambient">
           <EmptyState icon="group" title="No members yet" description="Add employees to give them access to this workspace's knowledge." />
         </div>
       ) : (
@@ -153,7 +153,7 @@ export function MembersTab({
           {members.map((m) => (
             <div
               key={m.employee_id}
-              className="bg-card rounded-xl border border-border shadow-sahara p-4 flex items-start gap-3 group hover:border-primary/20 transition-all"
+              className="bg-card rounded-xl  shadow-ambient p-4 flex items-start gap-3 group hover:border-primary/20 transition-all"
             >
               <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                 <span className="material-symbols-outlined text-primary text-sm">person</span>
@@ -172,7 +172,7 @@ export function MembersTab({
                             onValueChange={(val) => { if (val) handleUpdateRole(m.employee_id, val) }}
                             disabled={updatingRoleFor === m.employee_id}
                           >
-                            <SelectTrigger className="h-6 rounded-full border border-border px-2.5 py-0.5 text-xs font-semibold capitalize bg-transparent shadow-sm focus:ring-0 w-auto min-w-[90px]">
+                            <SelectTrigger className="h-6 rounded-full  px-2.5 py-0.5 text-xs font-semibold capitalize bg-transparent shadow-sm focus:ring-0 w-auto min-w-[90px]">
                               {updatingRoleFor === m.employee_id ? (
                                 <span className="material-symbols-outlined text-[14px] animate-spin mx-auto">progress_activity</span>
                               ) : (

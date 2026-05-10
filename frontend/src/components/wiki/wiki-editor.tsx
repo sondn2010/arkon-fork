@@ -151,7 +151,7 @@ export function WikiEditor({
   };
 
   return (
-    <div className="flex flex-col gap-0 rounded-xl border border-border overflow-hidden shadow-sahara">
+    <div className="flex flex-col gap-0 rounded-xl  overflow-hidden shadow-ambient">
       {/* Header: tab toggle */}
       <div className="flex items-center justify-between px-3 py-2 bg-card border-b border-border">
         <div className="flex gap-1">
@@ -246,7 +246,7 @@ export function WikiEditor({
             value={note}
             onChange={(e) => setNote(e.target.value)}
             placeholder={notePlaceholder ?? "Optional — describe what you changed"}
-            className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 placeholder:text-muted-foreground"
+            className="w-full rounded-lg  bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 placeholder:text-muted-foreground"
           />
         </div>
 

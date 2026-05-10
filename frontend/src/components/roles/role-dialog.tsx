@@ -161,7 +161,7 @@ export function RoleDialog({ open, onOpenChange, role, permissions, onSaved }: P
                 return (
                   <div
                     key={group}
-                    className="rounded-lg border border-border bg-card p-4 flex flex-col gap-3"
+                    className="rounded-lg  bg-card p-4 flex flex-col gap-3"
                   >
                     {/* Group header with select-all */}
                     <label className="flex items-center gap-2.5 cursor-pointer border-b border-border pb-2">
@@ -205,7 +205,7 @@ export function RoleDialog({ open, onOpenChange, role, permissions, onSaved }: P
                                   >
                                     info
                                   </span>
-                                  <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 hidden peer-hover:block z-50 w-64 px-3 py-2 text-xs text-popover-foreground bg-popover border border-border rounded-lg shadow-lg">
+                                  <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 hidden peer-hover:block z-50 w-64 px-3 py-2 text-xs text-popover-foreground bg-popover  rounded-lg shadow-lg">
                                     <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-x-[6px] border-x-transparent border-t-[6px] border-t-border" />
                                     {p.description}
                                   </div>

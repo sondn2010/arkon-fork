@@ -53,7 +53,7 @@ export function KnowledgeTypeCards({ types, loading, onEdit, onRefresh }: Props)
       {types.map((type) => (
         <div
           key={type.id}
-          className="bg-card rounded-xl p-5 border border-border shadow-sahara hover:border-primary/30 transition-colors"
+          className="bg-card rounded-xl p-5  shadow-ambient hover:border-primary/30 transition-colors"
         >
           <div className="flex items-start justify-between mb-3">
             <div className="flex items-center gap-3">

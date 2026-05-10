@@ -33,7 +33,7 @@ type Props = {
 export function AuditTable({ logs, loading }: Props) {
   if (loading) {
     return (
-      <div className="bg-card rounded-xl border border-border shadow-sahara flex items-center justify-center py-16">
+      <div className="bg-card rounded-xl  shadow-ambient flex items-center justify-center py-16">
         <span className="material-symbols-outlined text-3xl text-muted-foreground animate-spin">
           progress_activity
         </span>
@@ -43,7 +43,7 @@ export function AuditTable({ logs, loading }: Props) {
 
   if (logs.length === 0) {
     return (
-      <div className="bg-card rounded-xl border border-border shadow-sahara">
+      <div className="bg-card rounded-xl  shadow-ambient">
         <EmptyState
           icon="policy"
           title="No audit logs found"
@@ -54,7 +54,7 @@ export function AuditTable({ logs, loading }: Props) {
   }
 
   return (
-    <div className="bg-card rounded-xl border border-border shadow-sahara overflow-hidden">
+    <div className="bg-card rounded-xl  shadow-ambient overflow-hidden">
       <Table>
         <TableHeader>
           <TableRow className="hover:bg-transparent">

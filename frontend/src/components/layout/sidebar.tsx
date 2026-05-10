@@ -100,11 +100,11 @@ function isActive(href: string, pathname: string) {
 /** Pick a color for workspace icon based on workspace type */
 function workspaceColor(type: string): string {
   const colors: Record<string, string> = {
-    internal: "#c2652a",
-    customer: "#2a7ec2",
-    partner: "#2ac265",
+    internal: "#00adef",
+    customer: "#7c3aed",
+    partner: "#059669",
   };
-  return colors[type] || "#78706a";
+  return colors[type] || "#525c6c";
 }
 
 /* ─── Sub-components ─── */
@@ -127,14 +127,14 @@ function SidebarNavItem({
         "group relative flex items-center gap-2 rounded-md px-2 py-[5px] text-[13px] transition-colors duration-100",
         indented && "ml-3",
         active
-          ? "bg-black/[0.04] font-semibold text-foreground"
-          : "text-muted-foreground hover:bg-black/[0.03] hover:text-foreground"
+          ? "bg-primary/[0.08] font-semibold text-foreground"
+          : "text-muted-foreground hover:bg-primary/[0.05] hover:text-foreground"
       )}
     >
       <span
         className={cn(
           "material-symbols-outlined text-[18px] shrink-0",
-          active ? "filled text-foreground" : "text-muted-foreground/70 group-hover:text-muted-foreground"
+          active ? "filled text-primary" : "text-muted-foreground/70 group-hover:text-muted-foreground"
         )}
         style={{ fontVariationSettings: active ? "'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 20" : "'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20" }}
       >
@@ -228,7 +228,7 @@ function SidebarWorkspacesSection({
         {canCreate && (
           <Link
             href="/?new=1"
-            className="shrink-0 w-5 h-5 flex items-center justify-center rounded text-muted-foreground/40 hover:bg-black/[0.04] hover:text-muted-foreground transition-all duration-100 opacity-0 group-hover/ws:opacity-100 mr-1"
+            className="shrink-0 w-5 h-5 flex items-center justify-center rounded text-muted-foreground/40 hover:bg-primary/[0.05] hover:text-muted-foreground transition-all duration-100 opacity-0 group-hover/ws:opacity-100 mr-1"
             title="New Workspace"
           >
             <span
@@ -274,8 +274,8 @@ function SidebarWorkspacesSection({
                     className={cn(
                       "group relative flex items-center gap-2 rounded-md ml-3 px-2 py-[5px] text-[13px] transition-colors duration-100",
                       active
-                        ? "bg-black/[0.04] font-semibold text-foreground"
-                        : "text-muted-foreground hover:bg-black/[0.03] hover:text-foreground"
+                        ? "bg-primary/[0.08] font-semibold text-foreground"
+                        : "text-muted-foreground hover:bg-primary/[0.05] hover:text-foreground"
                     )}
                   >
                     <span
@@ -377,14 +377,14 @@ export function Sidebar() {
   });
 
   return (
-    <nav className="hidden md:flex flex-col h-full w-[240px] shrink-0 bg-[#f7f5f2] border-r border-black/[0.04]">
+    <nav className="hidden md:flex flex-col h-full w-[240px] shrink-0 bg-sidebar/80 backdrop-blur-[20px]">
       {/* Org Header + User */}
       <div className="pt-2">
         <OrgHeader user={user} />
       </div>
 
       {/* Divider */}
-      <div className="mx-3 border-t border-black/[0.04] my-1" />
+      <div className="mx-3 border-t border-sidebar-border my-1" />
 
       {/* Navigation */}
       <div className="flex-1 overflow-y-auto overflow-x-hidden px-2 py-1 sidebar-scrollbar">
@@ -409,7 +409,7 @@ export function Sidebar() {
       </div>
 
       {/* Bottom meta */}
-      <div className="px-3 py-2 border-t border-black/[0.04]">
+      <div className="px-3 py-2 bg-sidebar-accent/30">
         <span className="text-[10px] text-muted-foreground/40 font-medium">
           On-Premise · Internal
         </span>

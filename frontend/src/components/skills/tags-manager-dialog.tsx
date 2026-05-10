@@ -101,7 +101,7 @@ export function TagsManagerDialog({ onUpdate }: TagsManagerDialogProps) {
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger 
         render={
-          <Button variant="outline" className="shadow-sahara border-primary/20 hover:border-primary/50 text-primary">
+          <Button variant="outline" className="shadow-ambient border-primary/20 hover:border-primary/50 text-primary">
             <span className="material-symbols-outlined text-base mr-1">sell</span>
             Manage Tags
           </Button>
@@ -134,7 +134,7 @@ export function TagsManagerDialog({ onUpdate }: TagsManagerDialogProps) {
           </div>
 
           {/* List Area */}
-          <div className="flex-1 flex flex-col border border-border rounded-lg bg-secondary/5 overflow-hidden">
+          <div className="flex-1 flex flex-col  rounded-lg bg-secondary/5 overflow-hidden">
             <div className="flex items-center justify-between p-3 border-b border-border bg-background/50">
               <div className="flex items-center gap-2">
                 <input 

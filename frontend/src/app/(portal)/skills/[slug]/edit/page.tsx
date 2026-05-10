@@ -109,7 +109,7 @@ export default function SkillEditPage() {
               type="submit"
               form="skill-edit-form"
               disabled={saving || !formData.name.trim()}
-              className="w-32 sm:w-40 shadow-sahara"
+              className="w-32 sm:w-40 shadow-ambient"
             >
               {saving ? "Saving..." : "Save Changes"}
             </Button>
@@ -126,7 +126,7 @@ export default function SkillEditPage() {
       />
 
       <form id="skill-edit-form" onSubmit={handleSave}>
-        <div className="bg-card rounded-xl border border-border p-5 md:p-8 shadow-sm space-y-8">
+        <div className="bg-card rounded-xl  p-5 md:p-8 shadow-sm space-y-8">
           <div className="space-y-2">
             <Label htmlFor="name">Skill Name</Label>
             <Input

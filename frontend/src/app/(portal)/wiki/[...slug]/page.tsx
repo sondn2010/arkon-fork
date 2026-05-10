@@ -185,7 +185,7 @@ export default function WikiPageViewer() {
             >
               <span className="material-symbols-outlined text-base">search</span>
               Search
-              <kbd className="hidden sm:inline-block ml-1 px-1.5 py-0.5 rounded border border-border text-xs font-mono text-muted-foreground">
+              <kbd className="hidden sm:inline-block ml-1 px-1.5 py-0.5 rounded  text-xs font-mono text-muted-foreground">
                 ⌘K
               </kbd>
             </Button>
@@ -244,7 +244,7 @@ export default function WikiPageViewer() {
               <div className="flex items-center gap-3 mb-6">
                 <Link
                   href={isScoped ? `/workspaces` : "/wiki"}
-                  className="flex items-center justify-center w-8 h-8 rounded-full border border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground transition-colors shrink-0 shadow-sm"
+                  className="flex items-center justify-center w-8 h-8 rounded-full  bg-background text-muted-foreground hover:bg-accent hover:text-foreground transition-colors shrink-0 shadow-sm"
                   title={isScoped ? "Back to Workspace" : "Back to Wiki Index"}
                 >
                   <span className="material-symbols-outlined text-[18px]">arrow_back</span>

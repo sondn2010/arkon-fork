@@ -125,7 +125,7 @@ export function WikiSidebarRight({ slug, page }: Props) {
                 {page.knowledge_type_slugs.map((kt) => (
                   <span
                     key={kt}
-                    className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-accent/60 text-accent-foreground border border-border"
+                    className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-accent/60 text-accent-foreground "
                   >
                     {kt}
                   </span>
@@ -179,7 +179,7 @@ export function WikiSidebarRight({ slug, page }: Props) {
             <span className="material-symbols-outlined text-xs">hub</span>
             Local Graph
           </div>
-          <div className="rounded-xl overflow-hidden border border-border shadow-sm">
+          <div className="rounded-xl overflow-hidden  shadow-sm">
             <WikiGraphMini
               slug={slug}
               nodes={graphData.nodes}

@@ -109,7 +109,7 @@ export function KnowledgeTable({
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
               placeholder="Search documents..."
-              className="h-9 pl-9 pr-3 text-sm rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 w-[260px] placeholder:text-muted-foreground/60"
+              className="h-9 pl-9 pr-3 text-sm rounded-lg  bg-background focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 w-[260px] placeholder:text-muted-foreground/60"
             />
             {searchInput && (
               <button
@@ -128,7 +128,7 @@ export function KnowledgeTable({
       </div>
 
       {/* Table */}
-      <div className="bg-card rounded-xl border border-border shadow-sahara overflow-hidden">
+      <div className="bg-card rounded-xl  shadow-ambient overflow-hidden">
         {loading ? (
           <div className="flex items-center justify-center py-16">
             <span className="material-symbols-outlined text-3xl text-muted-foreground animate-spin">

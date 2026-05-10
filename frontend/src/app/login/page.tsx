@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth";
 import { Button } from "@/components/ui/button";
@@ -34,17 +35,20 @@ export default function LoginPage() {
       <div className="w-full max-w-md px-8">
         {/* Brand */}
         <div className="text-center mb-10">
-          <h1 className="text-5xl tracking-tight text-foreground mb-2">
-            Arkon
-          </h1>
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <Image src="/logo.png" alt="Arkon" width={40} height={40} className="rounded-[6px]" />
+            <h1 className="text-5xl tracking-tight text-foreground font-heading" style={{ letterSpacing: '-0.02em' }}>
+              Arkon
+            </h1>
+          </div>
           <p className="text-muted-foreground text-sm">
-            Enterprise AI Control Center
+            Enterprise AI Knowledge Hub
           </p>
         </div>
 
         {/* Login Card */}
-        <div className="bg-card rounded-xl border border-border shadow-sahara p-8">
-          <h2 className="text-2xl text-foreground mb-6">Sign in</h2>
+        <div className="bg-card rounded-xl shadow-ambient p-8">
+          <h2 className="text-2xl text-foreground mb-6 font-heading">Sign in</h2>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
             <div className="flex flex-col gap-2">
@@ -87,7 +91,7 @@ export default function LoginPage() {
             <Button
               type="submit"
               disabled={loading}
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-2"
+              className="w-full mt-2 py-4"
             >
               {loading ? (
                 <span className="flex items-center gap-2">
@@ -104,7 +108,7 @@ export default function LoginPage() {
         </div>
 
         <p className="text-center text-xs text-muted-foreground mt-6">
-          Arkon v0.1 — On-Premise Deployment
+          Arkon — On-Premise Deployment
         </p>
       </div>
     </div>

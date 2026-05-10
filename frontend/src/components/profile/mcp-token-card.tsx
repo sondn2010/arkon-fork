@@ -51,7 +51,7 @@ export function McpTokenCard() {
   };
 
   return (
-    <div className="bg-surface-variant rounded-xl p-6 border border-border">
+    <div className="bg-surface-variant rounded-xl p-6 ">
       <div className="flex items-center gap-3 mb-3">
         <span className="material-symbols-outlined text-primary">vpn_key</span>
         <div>
@@ -67,7 +67,7 @@ export function McpTokenCard() {
       {token ? (
         /* Token was just generated — show it */
         <div className="flex flex-col gap-3">
-          <div className="bg-[#3a302a] rounded-lg p-3 font-mono text-xs text-[#faf5ee] break-all">
+          <div className="bg-[#1f2937] rounded-lg p-3 font-mono text-xs text-[#e8f4ff] break-all">
             {token}
           </div>
           <div className="flex gap-2">

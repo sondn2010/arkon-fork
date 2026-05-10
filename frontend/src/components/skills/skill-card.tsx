@@ -45,7 +45,7 @@ export function SkillCard({
       className={cn(
         "bg-card rounded-xl p-5 border transition-all flex flex-col group animate-in fade-in slide-in-from-bottom-2 duration-300 relative",
         skill.status === "deleting" ? "cursor-not-allowed opacity-80" : "cursor-pointer",
-        "border-border shadow-sahara hover:border-primary/30"
+        "border-border shadow-ambient hover:border-primary/30"
       )}
     >
 

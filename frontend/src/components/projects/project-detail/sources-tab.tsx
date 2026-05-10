@@ -49,7 +49,7 @@ export function SourcesTab({
         <div className="flex items-center gap-3">
           {sources.length > 0 && (
             <>
-              <div className="flex items-center gap-2 bg-card border border-border rounded-xl px-4 py-2 shadow-sahara">
+              <div className="flex items-center gap-2 bg-card  rounded-xl px-4 py-2 shadow-ambient">
                 <span className="material-symbols-outlined text-sm text-primary">description</span>
                 <span className="text-sm font-semibold">{sources.length}</span>
                 <span className="text-xs text-muted-foreground">Documents</span>
@@ -100,7 +100,7 @@ export function SourcesTab({
 
       {/* Document cards */}
       {sources.length === 0 ? (
-        <div className="bg-card rounded-xl border border-border shadow-sahara py-16 flex flex-col items-center gap-3">
+        <div className="bg-card rounded-xl  shadow-ambient py-16 flex flex-col items-center gap-3">
           <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
             <span className="material-symbols-outlined text-primary" style={{ fontSize: 28 }}>
               folder_open
@@ -131,7 +131,7 @@ export function SourcesTab({
             return (
               <div
                 key={s.source_id}
-                className="group bg-card border border-border rounded-xl px-4 py-3.5 hover:border-primary/30 hover:shadow-sahara transition-all flex items-center gap-3"
+                className="group bg-card  rounded-xl px-4 py-3.5 hover:border-primary/30 hover:shadow-ambient transition-all flex items-center gap-3"
               >
                 {/* File icon */}
                 <div

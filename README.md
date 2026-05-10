@@ -1,72 +1,72 @@
 ![Arkon Banner](docs/assets/banner.png)
 
-# Arkon - Enterprise AI Knowledge Hub
+# Arkon - Trung Tâm Tri Thức AI Doanh Nghiệp
 
-**Connect your organization's knowledge to any Ai Client. Self-hosted, on-premise.**
+**Kết nối tri thức của tổ chức bạn với mọi AI Client. Tự lưu trữ, triển khai nội bộ.**
 
-Arkon is the central layer between your documents and your employees' AI clients. Upload your SOPs, policies, product specs, and internal docs - Arkon compiles them into a structured knowledge wiki and serves it directly to Claude via MCP. Every employee gets the right context, automatically, without copy-pasting.
+Arkon là lớp trung gian giữa tài liệu của bạn và các AI client của nhân viên. Tải lên quy trình vận hành, chính sách, thông số kỹ thuật sản phẩm và tài liệu nội bộ — Arkon tổng hợp chúng thành một wiki tri thức có cấu trúc và phục vụ trực tiếp cho Claude qua MCP. Mỗi nhân viên tự động nhận được đúng ngữ cảnh cần thiết, không cần sao chép thủ công.
 
-[Setup Guide](docs/SETUP.md) · [Architecture](docs/ARCHITECTURE.md) · [Wiki System](docs/WIKI.md) · [MCP & Claude](docs/MCP.md) · [AI Skills](docs/SKILLS.md) · [Access Control](docs/ACCESS-CONTROL.md)
+[Hướng Dẫn Cài Đặt](docs/SETUP.md) · [Kiến Trúc](docs/ARCHITECTURE.md) · [Hệ Thống Wiki](docs/WIKI.md) · [MCP & Claude](docs/MCP.md) · [AI Skills](docs/SKILLS.md) · [Kiểm Soát Truy Cập](docs/ACCESS-CONTROL.md)
 
 ---
 
-## The problem
+## Vấn Đề
 
-Most organizations adopt AI team-by-team, with no shared knowledge, inconsistent context, and no visibility into what information Ai Client is actually working with. Every employee manually pastes documents, repeats the same background, and gets different answers depending on what they remembered to include.
+Hầu hết các tổ chức triển khai AI theo từng nhóm riêng lẻ, không có tri thức dùng chung, ngữ cảnh không nhất quán và không thể giám sát AI client đang làm việc với thông tin gì. Mỗi nhân viên phải tự dán tài liệu thủ công, lặp lại cùng một thông tin nền và nhận được các câu trả lời khác nhau tùy thuộc vào những gì họ nhớ đưa vào.
 
 ![Problem](docs/assets/Problem.png)
 
-Arkon treats your AI client as a managed organizational resource - not a personal chatbot.
+Arkon quản lý AI client như một tài nguyên tổ chức — không phải chatbot cá nhân.
 
 ---
 
-## How it works
+## Cách Hoạt Động
 
 ![How it works](docs/assets/HowItWorks.png)
 
-Knowledge compounds. Every document you add enriches the existing wiki rather than creating isolated fragments. By the time an employee asks Claude a question, the answer has already been synthesized from dozens of sources.
+Tri thức được tích lũy theo thời gian. Mỗi tài liệu bạn thêm vào sẽ làm phong phú thêm wiki hiện có thay vì tạo ra các mảnh rời rạc. Khi nhân viên hỏi Claude một câu hỏi, câu trả lời đã được tổng hợp từ hàng chục nguồn.
 
 ---
 
-## Features
+## Tính Năng
 
-### Knowledge Wiki
-Documents are compiled into a persistent, interlinked wiki by an LLM agent - not just indexed. Each page covers a specific entity, concept, or topic. Pages cross-reference each other. The wiki grows smarter as more documents are added.
+### Wiki Tri Thức
+Tài liệu được tổng hợp thành wiki liên kết bền vững bởi một LLM agent — không chỉ đơn thuần lập chỉ mục. Mỗi trang bao gồm một thực thể, khái niệm hoặc chủ đề cụ thể. Các trang tham chiếu lẫn nhau. Wiki ngày càng thông minh hơn khi có thêm tài liệu mới.
 
-- Three-panel wiki browser: page tree, content, backlinks & outlinks
-- Full-text and semantic search
-- Knowledge graph visualization
-- Organize by knowledge type (SOP, Product, HR Policy, etc.)
-- Version history and rollback for every page
-- Draft proposal → editor review → approval workflow
+- Trình duyệt wiki ba bảng: cây trang, nội dung, liên kết ngược & liên kết xuôi
+- Tìm kiếm toàn văn và ngữ nghĩa
+- Trực quan hóa đồ thị tri thức
+- Phân loại theo loại tri thức (Quy trình, Sản phẩm, Chính sách Nhân sự, v.v.)
+- Lịch sử phiên bản và khôi phục cho mỗi trang
+- Quy trình đề xuất nháp → xem xét biên tập → phê duyệt
 
-### Workspaces
-Cross-functional knowledge contexts for projects, clients, or initiatives.
+### Không Gian Làm Việc (Workspaces)
+Ngữ cảnh tri thức liên chức năng cho các dự án, khách hàng hoặc sáng kiến.
 
-Create a workspace → add members from any department → attach documents. Each workspace has its own scoped wiki, document list, and member roster. Members see their workspace knowledge automatically through Claude.
+Tạo workspace → thêm thành viên từ bất kỳ bộ phận nào → đính kèm tài liệu. Mỗi workspace có wiki, danh sách tài liệu và danh sách thành viên riêng. Thành viên tự động thấy tri thức workspace qua Claude.
 
-- Role-based membership: Viewer, Contributor, Editor, Admin
-- Scoped wiki and document management
-- Contributors propose wiki edits; editors review and approve
+- Phân quyền thành viên theo vai trò: Xem, Đóng góp, Biên tập, Quản trị
+- Quản lý wiki và tài liệu theo phạm vi
+- Người đóng góp đề xuất chỉnh sửa wiki; biên tập viên xem xét và phê duyệt
 
 ### AI Skills
-Upload custom agent packages and make them available to employees through Claude. Skills are versioned, department-scoped, and distributed via MCP.
+Tải lên các gói agent tùy chỉnh và cung cấp cho nhân viên qua Claude. Skills được quản lý phiên bản, phân theo bộ phận và phân phối qua MCP.
 
-### MCP Server
-Employees connect Claude Desktop (or any MCP client) to Arkon using a personal token. Claude gets access to the compiled wiki, raw source documents, and AI skills - all filtered to the employee's permission scope.
+### Máy Chủ MCP
+Nhân viên kết nối Claude Desktop (hoặc bất kỳ MCP client nào) với Arkon bằng token cá nhân. Claude được truy cập wiki tổng hợp, tài liệu nguồn gốc và AI skills — tất cả được lọc theo phạm vi quyền của nhân viên.
 
-→ See [MCP & Claude](docs/MCP.md) for the full tool reference.
+→ Xem [MCP & Claude](docs/MCP.md) để tham khảo đầy đủ các công cụ.
 
-### Access Control
-Fine-grained RBAC at department level plus workspace membership roles. Admins define roles with granular permissions; employees inherit access based on department or explicit assignment.
+### Kiểm Soát Truy Cập
+RBAC chi tiết ở cấp bộ phận cộng với vai trò thành viên workspace. Quản trị viên định nghĩa vai trò với quyền hạn chi tiết; nhân viên kế thừa quyền truy cập theo bộ phận hoặc phân công trực tiếp.
 
-→ See [Access Control](docs/ACCESS-CONTROL.md) for the full permission model.
+→ Xem [Kiểm Soát Truy Cập](docs/ACCESS-CONTROL.md) để tham khảo mô hình quyền đầy đủ.
 
 ---
 
-## Quick Start (Docker)
+## Khởi Động Nhanh (Docker)
 
-**Prerequisites:** Docker, Docker Compose, an AI provider API key (Google, OpenAI, or Anthropic).
+**Yêu cầu:** Docker, Docker Compose, API key của nhà cung cấp AI (Google, OpenAI hoặc Anthropic).
 
 ```bash
 git clone https://github.com/nduckmink/arkon.git
@@ -74,10 +74,10 @@ cd arkon
 cp .env.docker.example .env.docker
 ```
 
-Edit `.env.docker` - set at minimum:
+Chỉnh sửa `.env.docker` — thiết lập tối thiểu:
 
 ```env
-SECRET_KEY=<run: python -c "import secrets; print(secrets.token_urlsafe(32))">
+SECRET_KEY=<chạy: python -c "import secrets; print(secrets.token_urlsafe(32))">
 DEFAULT_ADMIN_EMAIL=admin@yourcompany.com
 DEFAULT_ADMIN_PASSWORD=your-secure-password
 ```
@@ -86,17 +86,17 @@ DEFAULT_ADMIN_PASSWORD=your-secure-password
 docker compose --env-file .env.docker up -d --build
 ```
 
-Open **http://localhost:3119** and log in with your admin credentials.
+Mở **http://localhost:3119** và đăng nhập bằng thông tin quản trị viên.
 
-Go to **Settings** → configure your embedding model, LLM, and (optionally) vision model. Then upload your first document from **Knowledge Base**.
+Vào **Settings** → cấu hình embedding model, LLM và (tùy chọn) vision model. Sau đó tải lên tài liệu đầu tiên từ **Knowledge Base**.
 
-→ See [Setup Guide](docs/SETUP.md) for the full walkthrough including development mode.
+→ Xem [Hướng Dẫn Cài Đặt](docs/SETUP.md) để xem hướng dẫn đầy đủ bao gồm chế độ phát triển.
 
 ---
 
-## Connecting Claude
+## Kết Nối Claude
 
-Once an employee account is created and an MCP token is generated:
+Sau khi tạo tài khoản nhân viên và tạo MCP token:
 
 ```json
 {
@@ -111,53 +111,53 @@ Once an employee account is created and an MCP token is generated:
 }
 ```
 
-Add this to `claude_desktop_config.json` and restart Claude Desktop. The employee's compiled knowledge is immediately available.
+Thêm vào `claude_desktop_config.json` và khởi động lại Claude Desktop. Tri thức tổng hợp của nhân viên sẽ ngay lập tức khả dụng.
 
-→ See [MCP & Claude](docs/MCP.md) for the complete setup and tool reference.
+→ Xem [MCP & Claude](docs/MCP.md) để xem hướng dẫn cài đặt đầy đủ và tham khảo công cụ.
 
 ---
 
-## Architecture
+## Kiến Trúc
 
 ![Arkon System Design](docs/assets/Architecture.png)
 
-**Stack:** FastAPI · PostgreSQL + pgvector · Redis (arq) · MinIO · Next.js · Tailwind CSS
+**Công nghệ:** FastAPI · PostgreSQL + pgvector · Redis (arq) · MinIO · Next.js · Tailwind CSS
 
-**AI providers (your choice):** Google · OpenAI · Anthropic · Ollama · Voyage · Cohere
+**Nhà cung cấp AI (tùy chọn):** Google · OpenAI · Anthropic · Ollama · Voyage · Cohere
 
-**Outbound network:** configured AI provider only. No telemetry, no external calls.
+**Mạng ngoài:** chỉ nhà cung cấp AI đã cấu hình. Không có telemetry, không có cuộc gọi ngoài.
 
-→ See [Architecture](docs/ARCHITECTURE.md) for the full technical breakdown.
-
----
-
-## Roadmap
-
-- [x] LLM Wiki Agent - documents compiled into persistent, interlinked wiki
-- [x] Wiki browser - three-panel layout with graph visualization
-- [x] MCP Server with scoped knowledge access
-- [x] Ingestion pipeline - PDF, DOCX, DOC, URLs, images with vision captions
-- [x] Workspaces - scoped wiki, documents, and members
-- [x] Wiki draft & revision system - propose, review, approve, rollback
-- [x] AI Skills - versioned, department-scoped agent packages
-- [x] Full RBAC - department permissions + workspace membership roles
-- [x] Audit log
-- [ ] Regex Search for Human and AI
-- [ ] Arkon CLI - one-command employee setup
-- [ ] Notification system for draft review requests
-- [ ] Usage analytics dashboard
+→ Xem [Kiến Trúc](docs/ARCHITECTURE.md) để xem phân tích kỹ thuật đầy đủ.
 
 ---
 
-## License
+## Lộ Trình
 
-Arkon is licensed under the [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0).
+- [x] LLM Wiki Agent — tài liệu được tổng hợp thành wiki liên kết bền vững
+- [x] Trình duyệt wiki — bố cục ba bảng với trực quan hóa đồ thị
+- [x] Máy chủ MCP với truy cập tri thức theo phạm vi
+- [x] Pipeline nhập liệu — PDF, DOCX, DOC, URL, hình ảnh với chú thích vision
+- [x] Workspaces — wiki, tài liệu và thành viên theo phạm vi
+- [x] Hệ thống nháp & chỉnh sửa wiki — đề xuất, xem xét, phê duyệt, khôi phục
+- [x] AI Skills — gói agent được quản lý phiên bản, phân theo bộ phận
+- [x] RBAC đầy đủ — quyền bộ phận + vai trò thành viên workspace
+- [x] Nhật ký kiểm toán
+- [ ] Tìm kiếm Regex cho Con người và AI
+- [ ] Arkon CLI — thiết lập nhân viên một lệnh
+- [ ] Hệ thống thông báo cho yêu cầu xem xét nháp
+- [ ] Bảng phân tích sử dụng
 
-Free to use for internal tooling, research, personal projects, and non-profit use.
+---
 
-**Need a commercial license or custom integration?** We help organizations integrate Claude, custom AI agents, and MCP servers into their existing infrastructure - from connecting to internal databases and legacy systems to building purpose-built agents for specific business processes.
+## Giấy Phép
 
-[Get in touch →](https://bitsness.vn)
+Arkon được cấp phép theo [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0).
+
+Miễn phí sử dụng cho công cụ nội bộ, nghiên cứu, dự án cá nhân và tổ chức phi lợi nhuận.
+
+**Cần giấy phép thương mại hoặc tích hợp tùy chỉnh?** Chúng tôi hỗ trợ các tổ chức tích hợp Claude, AI agent tùy chỉnh và máy chủ MCP vào hạ tầng hiện có — từ kết nối cơ sở dữ liệu nội bộ và hệ thống kế thừa đến xây dựng agent chuyên biệt cho quy trình kinh doanh cụ thể.
+
+[Liên Hệ →](https://bitsness.vn)
 
 ---
 

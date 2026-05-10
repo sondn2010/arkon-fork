@@ -48,7 +48,7 @@ export function ProjectList({ projects, loading, isAdmin, onEdit, onOpen, onRefr
 
   if (loading) {
     return (
-      <div className="bg-card rounded-xl border border-border shadow-sahara flex items-center justify-center py-16">
+      <div className="bg-card rounded-xl  shadow-ambient flex items-center justify-center py-16">
         <span className="material-symbols-outlined text-3xl text-muted-foreground animate-spin">
           progress_activity
         </span>
@@ -58,7 +58,7 @@ export function ProjectList({ projects, loading, isAdmin, onEdit, onOpen, onRefr
 
   if (projects.length === 0) {
     return (
-      <div className="bg-card rounded-xl border border-border shadow-sahara">
+      <div className="bg-card rounded-xl  shadow-ambient">
         <EmptyState
           icon="workspaces"
           title="No workspaces yet"
@@ -81,7 +81,7 @@ export function ProjectList({ projects, loading, isAdmin, onEdit, onOpen, onRefr
           <div
             key={project.id}
             onClick={() => onOpen(project)}
-            className="bg-card rounded-xl border border-border shadow-sahara p-5 flex flex-col gap-3 cursor-pointer hover:border-primary/20 hover:bg-accent/20 hover:shadow-md transition-all group"
+            className="bg-card rounded-xl  shadow-ambient p-5 flex flex-col gap-3 cursor-pointer hover:border-primary/20 hover:bg-accent/20 hover:shadow-md transition-all group"
           >
             <div className="flex items-start justify-between gap-2">
               <div className="flex flex-col gap-1 flex-1 min-w-0">

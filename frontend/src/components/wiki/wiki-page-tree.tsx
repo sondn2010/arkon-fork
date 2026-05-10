@@ -163,7 +163,7 @@ export function WikiPageTree({
 
       {/* Search */}
       <div className="px-3 py-2 border-b border-border">
-        <div className="flex items-center gap-2 bg-background border border-border rounded-lg px-2.5 py-1.5">
+        <div className="flex items-center gap-2 bg-background  rounded-lg px-2.5 py-1.5">
           <span className="material-symbols-outlined text-sm text-muted-foreground">
             search
           </span>

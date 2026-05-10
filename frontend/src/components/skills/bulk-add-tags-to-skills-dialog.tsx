@@ -113,7 +113,7 @@ export function BulkAddTagsToSkillsDialog({
           <Label>Tags</Label>
           <div 
             className={cn(
-              "flex flex-wrap gap-1.5 p-2 min-h-[42px] border border-border rounded-md bg-secondary/5 transition-all cursor-text",
+              "flex flex-wrap gap-1.5 p-2 min-h-[42px]  rounded-md bg-secondary/5 transition-all cursor-text",
               "focus-within:border-primary focus-within:ring-1 focus-within:ring-primary/20 focus-within:bg-background"
             )}
             onClick={() => inputRef.current?.focus()}
@@ -147,7 +147,7 @@ export function BulkAddTagsToSkillsDialog({
 
           {/* Suggestions Dropdown */}
           {filteredSuggestions.length > 0 && (
-            <div className="absolute top-full left-0 right-0 mt-1 border border-border rounded-md bg-card shadow-xl z-20 overflow-hidden">
+            <div className="absolute top-full left-0 right-0 mt-1  rounded-md bg-card shadow-xl z-20 overflow-hidden">
               {filteredSuggestions.map(t => (
                 <div 
                   key={t}

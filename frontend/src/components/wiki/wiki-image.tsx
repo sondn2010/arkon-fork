@@ -20,7 +20,7 @@ export function WikiImage({
 }) {
   if (status === "loading") {
     return (
-      <span className="block my-4 rounded-lg border border-border bg-surface-variant/40 px-4 py-8 text-center text-xs text-muted-foreground">
+      <span className="block my-4 rounded-lg  bg-surface-variant/40 px-4 py-8 text-center text-xs text-muted-foreground">
         Đang tải hình ảnh…
       </span>
     );
@@ -66,7 +66,7 @@ export function WikiImage({
           src={src}
           alt={alt || ""}
           loading="lazy"
-          className="rounded-lg border border-border max-w-full max-h-[480px] object-contain mx-auto bg-surface-variant/30 transition-transform group-hover/wiki-img:scale-[1.01]"
+          className="rounded-lg  max-w-full max-h-[480px] object-contain mx-auto bg-surface-variant/30 transition-transform group-hover/wiki-img:scale-[1.01]"
         />
         {alt ? (
           <span className="block mt-1.5 text-xs text-muted-foreground italic text-center">

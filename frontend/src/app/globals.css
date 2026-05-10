@@ -5,10 +5,11 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ──────────────────────────────────────────────────────────────
-   Sahara Design System — Warm Minimalism
-   Primary: Burnt Sienna (#c2652a)
-   Background: Warm Linen (#faf5ee)
-   Fonts: EB Garamond (headings) + Manrope (body)
+   Hyper-Lucid Architect Design System
+   Primary: Catalyst Blue (#00adef)
+   Background: Cool Surface (#f4f6ff)
+   Text: Slate Gray (#1f2937)
+   Fonts: Space Grotesk (headings) + Manrope (body)
    ────────────────────────────────────────────────────────────── */
 
 @theme inline {
@@ -16,7 +17,7 @@
   --color-foreground: var(--foreground);
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, "Cascadia Code", monospace;
-  --font-heading: "EB Garamond", ui-serif, Georgia, serif;
+  --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -53,58 +54,106 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
-  /* Sahara custom */
-  --color-sahara: var(--sahara);
-  --color-sahara-foreground: var(--sahara-foreground);
-  --color-sahara-container: var(--sahara-container);
-  --color-sahara-muted: var(--sahara-muted);
+  /* Hyper-Lucid extras */
   --color-surface: var(--surface);
-  --color-surface-variant: var(--surface-variant);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-primary-container: var(--primary-container);
+  --color-outline-variant: var(--outline-variant);
+  --color-on-primary: var(--on-primary);
 }
 
 :root {
-  /* Sahara Warm Palette */
-  --background: #faf5ee;
-  --foreground: #3a302a;
-  --card: #f6f0e8;
-  --card-foreground: #3a302a;
-  --popover: #f6f0e8;
-  --popover-foreground: #3a302a;
-  --primary: #c2652a;
-  --primary-foreground: #ffffff;
-  --secondary: #ece6dc;
-  --secondary-foreground: #605850;
-  --muted: #ece6dc;
-  --muted-foreground: #78706a;
-  --accent: #ece6dc;
-  --accent-foreground: #3a302a;
-  --destructive: #c0392b;
-  --border: rgba(216, 208, 200, 0.6);
-  --input: rgba(216, 208, 200, 0.6);
-  --ring: #c2652a;
+  /* Hyper-Lucid Light Palette */
+  --background: #f4f6ff;
+  --foreground: #1f2937;
+  --card: #ffffff;
+  --card-foreground: #1f2937;
+  --popover: #ffffff;
+  --popover-foreground: #1f2937;
+  --primary: #00adef;
+  --primary-foreground: #e8f4ff;
+  --secondary: #eaf1ff;
+  --secondary-foreground: #525c6c;
+  --muted: #eaf1ff;
+  --muted-foreground: #525c6c;
+  --accent: #eaf1ff;
+  --accent-foreground: #1f2937;
+  --destructive: #dc2626;
+  --border: rgba(31, 41, 55, 0.08);
+  --input: #cfdef7;
+  --ring: #00adef;
   /* Charts */
-  --chart-1: #c2652a;
-  --chart-2: #e08850;
-  --chart-3: #f0a878;
-  --chart-4: #fbe8d8;
-  --chart-5: #78706a;
-  --radius: 0.625rem;
+  --chart-1: #00adef;
+  --chart-2: #2fbcff;
+  --chart-3: #7c3aed;
+  --chart-4: #059669;
+  --chart-5: #525c6c;
+  --radius: 1rem;
   /* Sidebar */
-  --sidebar: #faf5ee;
-  --sidebar-foreground: #3a302a;
-  --sidebar-primary: #c2652a;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: rgba(194, 101, 42, 0.1);
-  --sidebar-accent-foreground: #c2652a;
-  --sidebar-border: rgba(216, 208, 200, 0.6);
-  --sidebar-ring: #c2652a;
-  /* Sahara extras */
-  --sahara: #c2652a;
-  --sahara-foreground: #ffffff;
-  --sahara-container: #e08850;
-  --sahara-muted: #f0a878;
-  --surface: #f6f0e8;
-  --surface-variant: #ece6dc;
+  --sidebar: #eaf1ff;
+  --sidebar-foreground: #1f2937;
+  --sidebar-primary: #00adef;
+  --sidebar-primary-foreground: #e8f4ff;
+  --sidebar-accent: rgba(0, 173, 239, 0.08);
+  --sidebar-accent-foreground: #00adef;
+  --sidebar-border: rgba(31, 41, 55, 0.06);
+  --sidebar-ring: #00adef;
+  /* Hyper-Lucid extras */
+  --surface: #f4f6ff;
+  --surface-container-low: #eaf1ff;
+  --surface-container-high: #dde8f8;
+  --on-surface-variant: #525c6c;
+  --primary-container: #2fbcff;
+  --outline-variant: rgba(0, 173, 239, 0.20);
+  --on-primary: #001824;
+}
+
+.dark {
+  /* Hyper-Lucid Dark Palette */
+  --background: #0f1623;
+  --foreground: #e2e8f0;
+  --card: #161e2e;
+  --card-foreground: #e2e8f0;
+  --popover: #161e2e;
+  --popover-foreground: #e2e8f0;
+  --primary: #00adef;
+  --primary-foreground: #001824;
+  --secondary: #1a2540;
+  --secondary-foreground: #a0b0c8;
+  --muted: #1a2540;
+  --muted-foreground: #7a90a8;
+  --accent: #1a2540;
+  --accent-foreground: #e2e8f0;
+  --destructive: #ef4444;
+  --border: rgba(226, 232, 240, 0.08);
+  --input: #1a2540;
+  --ring: #00adef;
+  /* Charts — keep vivid in dark mode */
+  --chart-1: #00adef;
+  --chart-2: #2fbcff;
+  --chart-3: #a78bfa;
+  --chart-4: #34d399;
+  --chart-5: #7a90a8;
+  --radius: 1rem;
+  /* Sidebar */
+  --sidebar: #161e2e;
+  --sidebar-foreground: #e2e8f0;
+  --sidebar-primary: #00adef;
+  --sidebar-primary-foreground: #001824;
+  --sidebar-accent: rgba(0, 173, 239, 0.12);
+  --sidebar-accent-foreground: #00adef;
+  --sidebar-border: rgba(226, 232, 240, 0.06);
+  --sidebar-ring: #00adef;
+  /* Hyper-Lucid extras */
+  --surface: #0f1623;
+  --surface-container-low: #1a2540;
+  --surface-container-high: #232f45;
+  --on-surface-variant: #7a90a8;
+  --primary-container: #003a5c;
+  --outline-variant: rgba(0, 173, 239, 0.20);
+  --on-primary: #e8f4ff;
 }
 
 @layer base {
@@ -138,9 +187,14 @@
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-/* Sahara shadow utility */
-.shadow-sahara {
-  box-shadow: 0 2px 16px rgba(58, 48, 42, 0.04);
+/* Hyper-Lucid ambient shadow — tinted, large blur, negative spread */
+.shadow-ambient {
+  box-shadow: 0 8px 40px -10px rgba(31, 41, 55, 0.06);
+}
+
+/* Primary gradient — CTAs and hero accents (135deg) */
+.bg-primary-gradient {
+  background: linear-gradient(135deg, #00adef, #2fbcff);
 }
 
 /* ─── Notion-style sidebar scrollbar ─── */

@@ -29,7 +29,7 @@ export function RoleList({ roles, loading, permissions, onEdit, onRefresh }: Pro
 
   if (loading) {
     return (
-      <div className="bg-card rounded-xl border border-border flex items-center justify-center py-16">
+      <div className="bg-card rounded-xl  flex items-center justify-center py-16">
         <span className="material-symbols-outlined text-3xl text-muted-foreground animate-spin">
           progress_activity
         </span>
@@ -39,7 +39,7 @@ export function RoleList({ roles, loading, permissions, onEdit, onRefresh }: Pro
 
   if (roles.length === 0) {
     return (
-      <div className="bg-card rounded-xl border border-border">
+      <div className="bg-card rounded-xl ">
         <EmptyState
           icon="admin_panel_settings"
           title="No roles"
@@ -54,7 +54,7 @@ export function RoleList({ roles, loading, permissions, onEdit, onRefresh }: Pro
       {roles.map((role) => (
         <div
           key={role.id}
-          className="bg-card rounded-xl border border-border px-5 py-4 flex items-start justify-between gap-4"
+          className="bg-card rounded-xl  px-5 py-4 flex items-start justify-between gap-4"
         >
           <div className="flex flex-col gap-2 min-w-0">
             <div className="flex items-center gap-2">

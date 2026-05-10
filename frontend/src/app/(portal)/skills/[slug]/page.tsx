@@ -164,7 +164,7 @@ export default function SkillDetailPage() {
             title="Skill Not Found"
             description={`We couldn't find a skill with the identifier "${slug}". It might have been deleted or moved.`}
             action={
-              <Button onClick={() => router.push("/skills")} variant="outline" className="mt-4 shadow-sahara rounded-xl font-bold uppercase tracking-widest text-[11px] h-11 px-8">
+              <Button onClick={() => router.push("/skills")} variant="outline" className="mt-4 shadow-ambient rounded-xl font-bold uppercase tracking-widest text-[11px] h-11 px-8">
                 Return to Library
               </Button>
             }
@@ -221,7 +221,7 @@ export default function SkillDetailPage() {
         </div>
 
         <div className="lg:col-span-1 space-y-6">
-          <div className="bg-card rounded-xl border border-border p-8 space-y-8">
+          <div className="bg-card rounded-xl  p-8 space-y-8">
             <section>
               <h4 className="text-xs font-bold text-muted-foreground uppercase mb-4 tracking-wider">Status</h4>
               <div className="flex items-center gap-3">
@@ -268,7 +268,7 @@ export default function SkillDetailPage() {
 
                   {canAccess("skill", "edit") && viewingVersion !== skill.current_version && (
                     <Button 
-                      className="w-full bg-primary text-primary-foreground shadow-sahara font-bold text-[11px] uppercase tracking-wider h-10 animate-in fade-in slide-in-from-top-1"
+                      className="w-full bg-primary text-primary-foreground shadow-ambient font-bold text-[11px] uppercase tracking-wider h-10 animate-in fade-in slide-in-from-top-1"
                       onClick={handleSetLatest}
                       disabled={isSettingLatest}
                     >
@@ -280,7 +280,7 @@ export default function SkillDetailPage() {
 
             <section>
               <h4 className="text-xs font-bold text-muted-foreground uppercase mb-4 tracking-wider">Access</h4>
-              <div className="text-xs font-mono break-all bg-secondary/30 p-4 rounded-xl border border-border text-muted-foreground leading-relaxed">
+              <div className="text-xs font-mono break-all bg-secondary/30 p-4 rounded-xl  text-muted-foreground leading-relaxed">
                 {skill.version_hash || "N/A"}
               </div>
             </section>

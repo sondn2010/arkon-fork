@@ -1,7 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(node *)",
+      "PowerShell(node \"$env:USERPROFILE\\\\.claude\\\\scripts\\\\set-active-plan.cjs\" \"D:/sources/fish/00.CoreFrameworkFE/arkon-fork/plans/260510-1528-ui-rebrand-hyper-lucid\")",
+      "Bash(rtk pnpm *)",
+      "Bash(pnpm run *)",
+      "Bash(pnpm install *)",
+      "Bash(xargs sed -i 's/shadow-sahara/shadow-ambient/g')",
+      "Bash(xargs sed -i 's/border border-border//g')",
+      "Bash(git add *)"
     ]
   }
 }

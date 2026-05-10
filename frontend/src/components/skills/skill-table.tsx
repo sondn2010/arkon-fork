@@ -90,7 +90,7 @@ export function SkillTable({
                 onSearch(val);
               }}
               placeholder="Search skills..."
-              className="h-9 pl-9 pr-3 text-sm rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 w-[280px] placeholder:text-muted-foreground/60"
+              className="h-9 pl-9 pr-3 text-sm rounded-lg  bg-background focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 w-[280px] placeholder:text-muted-foreground/60"
             />
             {searchInput && (
               <button
@@ -109,7 +109,7 @@ export function SkillTable({
       </div>
 
       {/* Table Container */}
-      <div className="bg-card rounded-xl border border-border shadow-sahara overflow-hidden">
+      <div className="bg-card rounded-xl  shadow-ambient overflow-hidden">
         {loading ? (
           <div className="flex items-center justify-center py-24">
             <span className="material-symbols-outlined text-3xl text-muted-foreground animate-spin">progress_activity</span>
@@ -352,7 +352,7 @@ function EditSkillDialog({
           {scopeType === "department" && (
             <div className="flex flex-col gap-1.5 animate-in fade-in slide-in-from-top-2 duration-300">
               <Label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Target Departments</Label>
-              <div className="bg-background rounded-xl border border-border p-3">
+              <div className="bg-background rounded-xl  p-3">
                 <div className="max-h-[200px] pr-4 overflow-y-auto custom-scrollbar">
                   <div className="grid grid-cols-1 gap-2">
                     {departments.map((d) => (

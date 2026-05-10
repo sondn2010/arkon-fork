@@ -27,7 +27,7 @@ export function SkillSidebarFilters({
       
 
       {/* 2. Department Filter Card */}
-      <div className="bg-card rounded-2xl p-5 border border-border shadow-sahara flex flex-col">
+      <div className="bg-card rounded-2xl p-5  shadow-ambient flex flex-col">
         <div className="flex items-center justify-between mb-4">
           <h4 className="text-sm font-semibold text-foreground tracking-tight flex items-center gap-2">
             <span className="material-symbols-outlined text-primary/70 text-sm">corporate_fare</span>

@@ -135,7 +135,7 @@ export function WikiDetailInline({
       <div className="flex items-center gap-3 mb-6">
         <button
           onClick={onBack}
-          className="flex items-center justify-center w-8 h-8 rounded-full border border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground transition-colors shrink-0 shadow-sm"
+          className="flex items-center justify-center w-8 h-8 rounded-full  bg-background text-muted-foreground hover:bg-accent hover:text-foreground transition-colors shrink-0 shadow-sm"
           title="Back to pages"
         >
           <span className="material-symbols-outlined text-[18px]">arrow_back</span>

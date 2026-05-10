@@ -139,15 +139,15 @@ export function SkillSearchDialog({
         {/* Footer info */}
         <div className="border-t border-border/50 px-4 py-3 flex items-center gap-4 text-[10px] text-muted-foreground bg-secondary/10">
           <span className="flex items-center gap-1">
-            <kbd className="px-1.5 py-0.5 rounded border border-border bg-background font-mono text-[9px] shadow-sm">↵</kbd>
+            <kbd className="px-1.5 py-0.5 rounded  bg-background font-mono text-[9px] shadow-sm">↵</kbd>
             select
           </span>
           <span className="flex items-center gap-1">
-            <kbd className="px-1.5 py-0.5 rounded border border-border bg-background font-mono text-[9px] shadow-sm">↑↓</kbd>
+            <kbd className="px-1.5 py-0.5 rounded  bg-background font-mono text-[9px] shadow-sm">↑↓</kbd>
             navigate
           </span>
           <span className="flex items-center gap-1">
-            <kbd className="px-1.5 py-0.5 rounded border border-border bg-background font-mono text-[9px] shadow-sm">Esc</kbd>
+            <kbd className="px-1.5 py-0.5 rounded  bg-background font-mono text-[9px] shadow-sm">Esc</kbd>
             close
           </span>
         </div>

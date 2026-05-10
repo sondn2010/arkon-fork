@@ -40,7 +40,7 @@ function CopyButton({ text }: { text: string }) {
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
       }}
-      className="absolute top-2 right-2 opacity-0 group-hover/code:opacity-100 transition-opacity px-2 py-1 rounded-md bg-muted/80 hover:bg-muted text-xs text-muted-foreground hover:text-foreground border border-border"
+      className="absolute top-2 right-2 opacity-0 group-hover/code:opacity-100 transition-opacity px-2 py-1 rounded-md bg-muted/80 hover:bg-muted text-xs text-muted-foreground hover:text-foreground "
       title="Copy code"
     >
       <span className="material-symbols-outlined" style={{ fontSize: 13 }}>
@@ -110,7 +110,7 @@ export function WikiContent({
     <div className="relative">
       {/* Table of Contents — only show when enough headings */}
       {headings.length >= 3 && (
-        <div className="mb-8 rounded-xl border border-border bg-card/50 px-5 py-4">
+        <div className="mb-8 rounded-xl  bg-card/50 px-5 py-4">
           <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
             <span className="material-symbols-outlined" style={{ fontSize: 13 }}>toc</span>
             Contents
@@ -255,7 +255,7 @@ export function WikiContent({
                 .join("");
               return (
                 <div className="relative group/code">
-                  <pre className="bg-surface border border-border rounded-xl p-4 overflow-x-auto my-5 text-sm">
+                  <pre className="bg-surface  rounded-xl p-4 overflow-x-auto my-5 text-sm">
                     {children}
                   </pre>
                   <CopyButton text={codeText} />
@@ -294,7 +294,7 @@ export function WikiContent({
                     src={srcStr}
                     alt={altStr}
                     loading="lazy"
-                    className="rounded-lg border border-border max-w-full my-4 mx-auto"
+                    className="rounded-lg  max-w-full my-4 mx-auto"
                   />
                 );
               }
@@ -308,7 +308,7 @@ export function WikiContent({
               return <WikiImage alt={altStr} status="missing" />;
             },
             table: ({ children }) => (
-              <div className="my-5 rounded-xl border border-border overflow-hidden shadow-sahara">
+              <div className="my-5 rounded-xl  overflow-hidden shadow-ambient">
                 <Table>{children}</Table>
               </div>
             ),

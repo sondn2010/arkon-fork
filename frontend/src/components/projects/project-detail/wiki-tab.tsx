@@ -92,7 +92,7 @@ export function WikiTab({ project, wikiPages, wikiLoading, wikiIndexMd }: Props)
               <>
                 {/* Stats bar + Graph View button on same row */}
                 <div className="flex flex-wrap items-center gap-3 mb-8">
-                  <div className="flex items-center gap-2 bg-card border border-border rounded-xl px-4 py-2.5 shadow-sahara">
+                  <div className="flex items-center gap-2 bg-card  rounded-xl px-4 py-2.5 shadow-ambient">
                     <span className="material-symbols-outlined text-base text-primary">
                       article
                     </span>
@@ -106,7 +106,7 @@ export function WikiTab({ project, wikiPages, wikiLoading, wikiIndexMd }: Props)
                     .map(([type, count]) => (
                       <div
                         key={type}
-                        className="flex items-center gap-1.5 bg-card border border-border rounded-xl px-3 py-2.5 shadow-sahara"
+                        className="flex items-center gap-1.5 bg-card  rounded-xl px-3 py-2.5 shadow-ambient"
                       >
                         <WikiTypeBadge type={type} />
                         <span className="text-xs text-muted-foreground tabular-nums">
@@ -116,7 +116,7 @@ export function WikiTab({ project, wikiPages, wikiLoading, wikiIndexMd }: Props)
                     ))}
                   <div className="flex items-center gap-2 ml-auto">
                     {wikiPages[0]?.updated_at && (
-                      <div className="flex items-center gap-2 bg-card border border-border rounded-xl px-4 py-2.5 shadow-sahara">
+                      <div className="flex items-center gap-2 bg-card  rounded-xl px-4 py-2.5 shadow-ambient">
                         <span className="material-symbols-outlined text-base text-muted-foreground">
                           schedule
                         </span>
@@ -131,7 +131,7 @@ export function WikiTab({ project, wikiPages, wikiLoading, wikiIndexMd }: Props)
                     )}
                     <button
                       onClick={() => setShowGraph(true)}
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-sahara"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-ambient"
                     >
                       <span className="material-symbols-outlined text-base">hub</span>
                       Graph View
@@ -172,7 +172,7 @@ export function WikiTab({ project, wikiPages, wikiLoading, wikiIndexMd }: Props)
                     <button
                       key={page.slug}
                       onClick={() => setSelectedWikiSlug(page.slug)}
-                      className="group block bg-card border border-border rounded-xl p-4 hover:border-primary/40 hover:shadow-sahara transition-all text-left"
+                      className="group block bg-card  rounded-xl p-4 hover:border-primary/40 hover:shadow-ambient transition-all text-left"
                     >
                       <div className="flex items-start justify-between gap-2 mb-2">
                         <div className="flex items-center gap-1.5 flex-wrap">

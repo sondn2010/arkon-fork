@@ -33,7 +33,7 @@ export function RecentSourcesCard() {
   }, []);
 
   return (
-    <div className="bg-card rounded-xl p-6 border border-border shadow-sahara">
+    <div className="bg-card rounded-xl p-6  shadow-ambient">
       <h3 className="text-xl tracking-tight text-foreground border-b border-border pb-3 mb-4">
         Recent Documents
       </h3>

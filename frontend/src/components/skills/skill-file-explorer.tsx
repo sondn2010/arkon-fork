@@ -235,7 +235,7 @@ export function SkillFileExplorer({ skillId, version }: SkillFileExplorerProps) 
   };
 
   return (
-    <div className="bg-card rounded-2xl border border-border overflow-hidden shadow-sahara flex flex-col lg:flex-row h-[750px]">
+    <div className="bg-card rounded-2xl  overflow-hidden shadow-ambient flex flex-col lg:flex-row h-[750px]">
       {/* Sidebar - File Tree */}
       <div className="w-full lg:w-80 border-b lg:border-b-0 lg:border-r border-border bg-secondary/5 flex flex-col overflow-hidden shrink-0">
         <div className="px-5 py-4 border-b border-border bg-secondary/10 flex items-center justify-between">
@@ -269,7 +269,7 @@ export function SkillFileExplorer({ skillId, version }: SkillFileExplorerProps) 
           <>
             <div className="px-6 py-4 border-b border-border bg-muted/5 flex items-center justify-between shrink-0">
               <div className="flex items-center gap-3 min-w-0">
-                <span className="text-xs font-mono text-foreground font-semibold truncate bg-secondary/30 px-2 py-1 rounded-md border border-border/50">
+                <span className="text-xs font-mono text-foreground font-semibold truncate bg-secondary/30 px-2 py-1 rounded-md /50">
                   {selectedPath}
                 </span>
               </div>
@@ -303,7 +303,7 @@ export function SkillFileExplorer({ skillId, version }: SkillFileExplorerProps) 
                 </div>
               ) : content ? (
                 selectedPath.toLowerCase().endsWith(".md") ? (
-                  <div className="p-10 md:p-16 max-w-4xl mx-auto bg-card rounded-2xl my-8 border border-border/50 shadow-sm">
+                  <div className="p-10 md:p-16 max-w-4xl mx-auto bg-card rounded-2xl my-8 /50 shadow-sm">
                     <div className="prose prose-sm dark:prose-invert max-w-none markdown-content">
                       <ReactMarkdown remarkPlugins={[remarkGfm]}>
                         {content}

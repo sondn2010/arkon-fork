@@ -96,7 +96,7 @@ export function UploadSkillDialog({ allDepartments, onUploaded }: UploadSkillDia
     }}>
       <DialogTrigger
         render={
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-sahara">
+          <Button className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-ambient">
             <span className="material-symbols-outlined text-base mr-1">upload</span>
             Upload Skill
           </Button>
@@ -165,7 +165,7 @@ export function UploadSkillDialog({ allDepartments, onUploaded }: UploadSkillDia
             {scopeType === "department" && (
               <div className="grid gap-2 animate-in fade-in slide-in-from-top-1">
                 <Label>Target Departments</Label>
-                <div className="bg-secondary/5 rounded-xl border border-border p-3">
+                <div className="bg-secondary/5 rounded-xl  p-3">
                   <div className="max-h-[200px] pr-4 overflow-y-auto custom-scrollbar">
                     <div className="grid grid-cols-1 gap-2">
                       {allDepartments.map((d) => (

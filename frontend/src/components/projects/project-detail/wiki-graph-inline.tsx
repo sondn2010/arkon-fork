@@ -78,7 +78,7 @@ export function WikiGraphInline({ projectId, onBack }: { projectId: string; onBa
 
         <div className="flex items-center gap-2">
           {/* Search */}
-          <div className="flex items-center gap-2 bg-background border border-border rounded-lg px-2.5 py-1.5">
+          <div className="flex items-center gap-2 bg-background  rounded-lg px-2.5 py-1.5">
             <span className="material-symbols-outlined text-sm text-muted-foreground">search</span>
             <input
               type="text"
@@ -133,7 +133,7 @@ export function WikiGraphInline({ projectId, onBack }: { projectId: string; onBa
 
       {/* Search dropdown */}
       {searchQuery && searchMatches.length > 0 && (
-        <div className="absolute top-[52px] right-5 z-20 bg-card border border-border rounded-xl shadow-lg py-1 max-h-48 overflow-y-auto w-64">
+        <div className="absolute top-[52px] right-5 z-20 bg-card  rounded-xl shadow-lg py-1 max-h-48 overflow-y-auto w-64">
           {searchMatches.slice(0, 8).map((n) => (
             <button
               key={n.slug}

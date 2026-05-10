@@ -54,7 +54,7 @@ export function DepartmentCards({ departments, loading, onEdit, onRefresh }: Pro
       {departments.map((dept) => (
         <div
           key={dept.id}
-          className="bg-card rounded-xl p-6 border border-border shadow-sahara flex flex-col gap-4 hover:border-primary/30 transition-colors"
+          className="bg-card rounded-xl p-6  shadow-ambient flex flex-col gap-4 hover:border-primary/30 transition-colors"
         >
           <div className="flex items-start justify-between">
             <div className="flex items-center gap-3">

@@ -43,10 +43,10 @@ type Props = {
   onNodeClick?: (slug: string) => void;
 };
 
-const EDGE_COLOR = "rgba(120,112,106,0.35)";
-const EDGE_HIGHLIGHT = "#c2652a";
-const LABEL_COLOR = "#3a302a";
-const BG_COLOR = "#faf5ee";
+const EDGE_COLOR = "rgba(82,92,108,0.35)";
+const EDGE_HIGHLIGHT = "#00adef";
+const LABEL_COLOR = "#1f2937";
+const BG_COLOR = "#f4f6ff";
 
 export function WikiGraph({
   nodes: rawNodes,
@@ -279,7 +279,7 @@ export function WikiGraph({
       // Border.
       ctx.lineWidth = isCenter ? 2.5 : isHovered ? 2 : 1;
       ctx.strokeStyle = isCenter
-        ? "#3a302a"
+        ? "#1f2937"
         : isHovered
           ? color
           : "rgba(255,255,255,0.85)";
@@ -478,7 +478,7 @@ export function WikiGraph({
   return (
     <div
       ref={containerRef}
-      className={`relative w-full overflow-hidden ${mini ? "rounded-xl border border-border" : ""}`}
+      className={`relative w-full overflow-hidden ${mini ? "rounded-xl " : ""}`}
       style={{ height: height ?? "100%", background: BG_COLOR }}
       onMouseMove={(e) => {
         const rect = containerRef.current?.getBoundingClientRect();
@@ -530,8 +530,8 @@ export function WikiGraph({
             left: Math.min(tooltip.x + 12, dimensions.w - 220),
             top: Math.max(tooltip.y - 8, 8),
             background: "var(--color-card, #fff)",
-            color: "var(--color-foreground, #3a302a)",
-            border: "1px solid var(--color-border, rgba(216,208,200,0.6))",
+            color: "var(--color-foreground, #1f2937)",
+            border: "1px solid var(--color-border, rgba(31,41,55,0.08))",
             maxWidth: 220,
           }}
         >
@@ -561,7 +561,7 @@ export function WikiGraph({
 
       {/* Legend */}
       {!mini && (
-        <div className="absolute bottom-3 left-3 rounded-xl border border-border bg-card/90 backdrop-blur-sm px-3 py-2.5 text-xs shadow-sm max-w-[240px]">
+        <div className="absolute bottom-3 left-3 rounded-xl  bg-card/90 backdrop-blur-sm px-3 py-2.5 text-xs shadow-sm max-w-[240px]">
           <div className="mb-1.5 font-semibold text-foreground text-xs">Node Types</div>
           <div className="flex flex-col gap-1">
             {Object.entries(typeCounts)
@@ -618,7 +618,7 @@ export function WikiGraph({
 
       {/* Zoom controls */}
       {!mini && (
-        <div className="absolute bottom-3 right-3 flex flex-col items-center gap-1 rounded-xl border border-border bg-card/90 backdrop-blur-sm shadow-sm p-1">
+        <div className="absolute bottom-3 right-3 flex flex-col items-center gap-1 rounded-xl  bg-card/90 backdrop-blur-sm shadow-sm p-1">
           <button
             onClick={() => fgRef.current?.zoom(fgRef.current.zoom() * 1.2, 200)}
             className="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-accent/50 transition-colors text-muted-foreground hover:text-foreground"

@@ -35,7 +35,7 @@ export function SystemHealthCard() {
   const allHealthy = health.api === "healthy" && health.database === "healthy" && health.worker === "healthy";
 
   return (
-    <div className="bg-card rounded-xl p-6 border border-border shadow-sahara">
+    <div className="bg-card rounded-xl p-6  shadow-ambient">
       <div className="flex justify-between items-center border-b border-border pb-3 mb-4">
         <h3 className="text-xl tracking-tight text-foreground">System Health</h3>
         <span className={`text-xs font-medium flex items-center gap-1 ${allHealthy ? "text-primary" : "text-destructive"}`}>

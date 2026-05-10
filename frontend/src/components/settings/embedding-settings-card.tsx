@@ -158,14 +158,14 @@ export function EmbeddingSettingsCard() {
 
   if (!catalog || !status) {
     return (
-      <div className="bg-card rounded-xl p-6 border border-border shadow-sahara">
+      <div className="bg-card rounded-xl p-6  shadow-ambient">
         <p className="text-sm text-muted-foreground">Loading embedding catalog…</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-card rounded-xl p-6 border border-border shadow-sahara">
+    <div className="bg-card rounded-xl p-6  shadow-ambient">
       <div className="flex items-center gap-3 mb-4">
         <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
           <span className="material-symbols-outlined text-primary text-base">data_array</span>

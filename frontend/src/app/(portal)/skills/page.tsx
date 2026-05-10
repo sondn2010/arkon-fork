@@ -185,7 +185,7 @@ export default function SkillsPage() {
               className="lg:col-span-3 flex flex-col gap-6"
             >
 
-              <div className="bg-background/40 rounded-2xl border border-border/50 p-6">
+              <div className="bg-background/40 rounded-2xl /50 p-6">
                 <div className="flex flex-col gap-4">
                 {loading && skills.length === 0 ? (
                   <div className="flex items-center justify-center py-24">
