@@ -9,7 +9,18 @@
       "Bash(pnpm install *)",
       "Bash(xargs sed -i 's/shadow-sahara/shadow-ambient/g')",
       "Bash(xargs sed -i 's/border border-border//g')",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(docker compose *)",
+      "Bash(cp .env.docker.example .env.docker)",
+      "Bash(python -c \"import secrets; print\\(secrets.token_urlsafe\\(32\\)\\)\")",
+      "Bash(echo \"SECRET_KEY=$\\(python -c \"import secrets; print\\(secrets.token_urlsafe\\(32\\)\\)\"\\)\")",
+      "Bash(python.exe -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d, indent=2\\)\\)\")",
+      "Bash(docker exec *)",
+      "Bash(docker run *)",
+      "Bash(docker image *)",
+      "Bash(curl *)"
     ]
   }
 }

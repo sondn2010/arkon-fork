@@ -76,9 +76,10 @@ services:
   api:
     <<: *backend
     container_name: arkon_api
+    entrypoint: []
     ports:
       - "5055:5055"
-    command: python -m uvicorn app.main:app --host 0.0.0.0 --port 5055
+    command: sh -c "alembic upgrade head && python -m uvicorn app.main:app --host 0.0.0.0 --port 5055"
     healthcheck:
       test: ["CMD", "python", "-c",
              "import urllib.request; urllib.request.urlopen('http://localhost:5055/health')"]
@@ -90,6 +91,7 @@ services:
   worker:
     <<: *backend
     container_name: arkon_worker
+    entrypoint: []
     command: python -m arq app.worker.WorkerSettings
     depends_on:
       api:
@@ -98,6 +100,7 @@ services:
   worker_skills:
     <<: *backend
     container_name: arkon_worker_skills
+    entrypoint: []
     command: python -m arq app.worker.SkillWorkerSettings
     depends_on:
       api:
