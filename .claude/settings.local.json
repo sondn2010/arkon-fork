@@ -30,7 +30,11 @@
       "Bash(python -c \"from app.main import app; print\\('✓ Backend compiles'\\)\")",
       "Bash(python -m py_compile app/main.py app/config.py app/mcp/server.py app/mcp/__init__.py app/mcp/resources.py app/mcp/tools.py app/__init__.py app/services/permissions.py app/routers/rbac.py)",
       "Bash(python -m py_compile app/routers/guide.py)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(pnpm add *)",
+      "Bash(dir /s /b D:\\\\sources\\\\fish\\\\00.CoreFrameworkFE\\\\arkon-fork\\\\frontend\\\\src\\\\app\\\\*.tsx)",
+      "Bash(pnpm remove *)",
+      "Bash(pnpm build *)"
     ]
   }
 }

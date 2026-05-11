@@ -58,6 +58,7 @@ FastAPI application serving two protocols simultaneously:
 - Projects (Workspaces): member management, scoped sources and wiki
 - RBAC: departments, employees, roles, permissions
 - Skills: upload, version management, scope assignment
+- Guide: user guide/help center serving markdown docs
 - Audit: activity log
 
 **MCP Server** (`/mcp`) — used by Claude Desktop and other MCP clients:
@@ -206,7 +207,8 @@ arkon/
 │   │   ├── knowledge_types.py
 │   │   ├── admin_settings.py # AI provider config
 │   │   ├── audit.py          # Audit log
-│   │   └── notes.py
+│   │   ├── notes.py
+│   │   ├── guide.py        # User guide/help center
 │   ├── services/
 │   │   ├── auth_service.py       # JWT, get_current_user, require_permission
 │   │   ├── mcp_auth_service.py   # MCP token resolution
@@ -227,7 +229,7 @@ arkon/
 │       └── tools.py              # All MCP tools (register_tools)
 ├── frontend/
 │   └── src/
-│       ├── app/(portal)/         # Page routes (wiki, workspaces, knowledge, ...)
+│       ├── app/(portal)/         # Page routes (wiki, workspaces, knowledge, guide, ...)
 │       └── components/           # UI components
 ├── alembic/
 │   └── versions/                 # Migration files (001 → 014)

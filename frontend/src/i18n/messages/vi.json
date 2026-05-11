@@ -1,0 +1,218 @@
+{
+  "Navigation": {
+    "dashboard": "Bảng Điều Khiển",
+    "workspaces": "Không Gian Làm Việc",
+    "orgKnowledge": "Kiến Thức",
+    "helpCenter": "Trung Tâm Trợ Giúp",
+    "wiki": "Wiki",
+    "aiSkills": "Kỹ Năng AI",
+    "organization": "Tổ Chức",
+    "departments": "Phòng Ban",
+    "employees": "Nhân Viên",
+    "roles": "Vai Trò",
+    "system": "Hệ Thống",
+    "auditLog": "Nhật Ký Kiểm Tra",
+    "settings": "Cài Đặt",
+    "profile": "Hồ Sơ",
+    "signOut": "Đăng Xuất"
+  },
+  "Common": {
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "create": "Tạo",
+    "edit": "Sửa",
+    "delete": "Xóa",
+    "search": "Tìm Kiếm",
+    "searchPlaceholder": "Tìm kiếm...",
+    "loading": "Đang tải...",
+    "noResults": "Không có kết quả",
+    "confirm": "Xác Nhận",
+    "close": "Đóng",
+    "back": "Quay Lại",
+    "next": "Tiếp Theo",
+    "add": "Thêm",
+    "remove": "Xóa Bỏ",
+    "update": "Cập Nhật",
+    "submit": "Gửi",
+    "refresh": "Làm Mới",
+    "view": "Xem",
+    "export": "Xuất",
+    "import": "Nhập",
+    "upload": "Tải Lên",
+    "download": "Tải Xuống",
+    "copy": "Sao Chép",
+    "paste": "Dán",
+    "clear": "Xóa",
+    "filter": "Lọc",
+    "sort": "Sắp Xếp",
+    "select": "Chọn",
+    "selectAll": "Chọn Tất Cả",
+    "none": "Không",
+    "yes": "Có",
+    "no": "Không",
+    "ok": "OK",
+    "apply": "Áp Dụng",
+    "retry": "Thử Lại",
+    "required": "Bắt Buộc",
+    "optional": "Tùy Chọn",
+    "active": "Hoạt Động",
+    "inactive": "Ngừng Hoạt Động",
+    "pending": "Chờ Xử Lý",
+    "approved": "Đã Duyệt",
+    "rejected": "Từ Chối",
+    "draft": "Bản Nháp",
+    "published": "Đã Xuất Bản",
+    "archived": "Đã Lưu Trữ",
+    "private": "Riêng Tư",
+    "public": "Công Khai",
+    "onPremise": "Nội Bộ",
+    "internal": "Nội Bộ"
+  },
+  "Pages": {
+    "dashboard": {
+      "title": "Bảng Điều Khiển",
+      "description": "Quản lý dự án và tương tác khách hàng — mỗi dự án có đội ngũ và tài liệu riêng.",
+      "newWorkspace": "Tạo Không Gian"
+    },
+    "departments": {
+      "title": "Phòng Ban",
+      "description": "Sắp xếp nhân viên theo phòng ban và quản lý quyền truy cập kiến thức.",
+      "addDepartment": "Thêm Phòng Ban"
+    },
+    "employees": {
+      "title": "Nhân Viên",
+      "description": "Quản lý tài khoản người dùng và token truy cập MCP.",
+      "addEmployee": "Thêm Nhân Viên"
+    },
+    "roles": {
+      "title": "Vai Trò",
+      "description": "Định nghĩa các bộ quyền có thể gán cho nhân viên.",
+      "createRole": "Tạo Vai Trò"
+    },
+    "projects": {
+      "title": "Dự Án",
+      "description": "Quản lý bối cảnh kiến thức đa chức năng cho khách hàng, sáng kiến và sự kiện."
+    },
+    "workspaces": {
+      "title": "Không Gian Làm Việc",
+      "description": "Quản lý dự án và tương tác khách hàng — mỗi dự án có đội ngũ và tài liệu riêng."
+    },
+    "knowledge": {
+      "title": "Kho Kiến Thức",
+      "description": "Quản lý và tổ chức tài liệu, danh mục của tổ chức.",
+      "uploadDocument": "Tải Tài Liệu",
+      "addCategory": "Thêm Danh Mục"
+    },
+    "wiki": {
+      "title": "Wiki Kiến Thức",
+      "description": "Kiến thức được tổng hợp từ tài liệu của tổ chức.",
+      "wikiIsEmpty": "Wiki trống",
+      "wikiIsEmptyDesc": "Tải lên và biên soạn tài liệu để bắt đầu xây dựng wiki kiến thức."
+    },
+    "profile": {
+      "title": "Hồ Sơ",
+      "description": "Quản lý cài đặt tài khoản.",
+      "updatePassword": "Đổi Mật Khẩu"
+    },
+    "settings": {
+      "title": "Cài Đặt",
+      "description": "Cấu hình nhà cung cấp AI cho embedding, LLM và xử lý vision.",
+      "llmProvider": "Nhà Cung Cấp LLM",
+      "visionProvider": "Nhà Cung Cấp Vision",
+      "visionProviderDesc": "Tùy chọn — dùng cho phân tích hình ảnh trong tài liệu"
+    },
+    "audit": {
+      "title": "Nhật Ký Kiểm Tra",
+      "description": "Xem xét quyết định kiểm soát truy cập và đánh giá chính sách trên toàn hệ thống.",
+      "refresh": "Làm Mới"
+    },
+    "guide": {
+      "title": "Trung Tâm Trợ Giúp",
+      "description": "Hướng dẫn sử dụng và tài liệu cho tổ chức của bạn."
+    },
+    "skills": {
+      "title": "Kỹ Năng AI",
+      "description": "Quản lý và triển khai các gói kỹ năng cho hệ thống AI."
+    }
+  },
+  "Dialogs": {
+    "createDepartment": "Tạo Phòng Ban",
+    "editDepartment": "Sửa Phòng Ban",
+    "createEmployee": "Thêm Nhân Viên",
+    "editEmployee": "Sửa Nhân Viên",
+    "createRole": "Tạo Vai Trò",
+    "editRole": "Sửa Vai Trò",
+    "newWorkspace": "Tạo Không Gian",
+    "editWorkspace": "Sửa Không Gian",
+    "createKnowledgeType": "Tạo Loại Kiến Thức",
+    "editKnowledgeType": "Sửa Loại Kiến Thức",
+    "uploadDocument": "Tải Tài Liệu",
+    "editSkill": "Sửa Kỹ Năng",
+    "addTags": "Lưu Thẻ"
+  },
+  "Messages": {
+    "saveFailed": "Lưu thất bại",
+    "deleteFailed": "Xóa thất bại",
+    "loadFailed": "Tải thất bại",
+    "uploadFailed": "Tải lên thất bại",
+    "actionFailed": "Thao tác thất bại",
+    "loginFailed": "Đăng nhập thất bại",
+    "passwordRequired": "Mật khẩu bắt buộc",
+    "nameRequired": "Tên bắt buộc",
+    "confirmDelete": "Bạn có chắc chắn muốn xóa không? Hành động này không thể hoàn tác.",
+    "confirmDeleteDept": "Xóa phòng ban này và tất cả nhân viên?",
+    "confirmDeleteEmp": "Xóa nhân viên này? Không thể hoàn tác.",
+    "confirmDeleteDoc": "Xóa tài liệu này? Không thể hoàn tác.",
+    "confirmDeleteProject": "Xóa dự án này? Các thành viên sẽ mất quyền truy cập tài liệu.",
+    "noDepartments": "Chưa có phòng ban",
+    "noEmployees": "Chưa có nhân viên",
+    "noRoles": "Chưa có vai trò",
+    "noWorkspaces": "Chưa có không gian làm việc",
+    "noDocuments": "Không tìm thấy tài liệu",
+    "noAuditLogs": "Không có nhật ký kiểm tra",
+    "noMembers": "Chưa có thành viên",
+    "createFirstDept": "Tạo phòng ban đầu tiên để sắp xếp nhân viên",
+    "createFirstWorkspace": "Tạo không gian làm việc để quản lý dự án",
+    "uploadFirstDoc": "Tải tài liệu để bắt đầu xây dựng kho kiến thức.",
+    "searchNoResults": "Không tìm thấy kết quả",
+    "passwordChanged": "Đổi mật khẩu thành công"
+  },
+  "Table": {
+    "name": "Tên",
+    "email": "Email",
+    "role": "Vai Trò",
+    "department": "Phòng Ban",
+    "status": "Trạng Thái",
+    "createdAt": "Ngày Tạo",
+    "actions": "Thao Tác",
+    "active": "Hoạt Động",
+    "inactive": "Ngừng",
+    "edit": "Sửa",
+    "delete": "Xóa",
+    "deactivate": "Vô Hiệu",
+    "activate": "Kích Hoạt"
+  },
+  "Form": {
+    "name": "Tên",
+    "description": "Mô Tả",
+    "email": "Email",
+    "password": "Mật Khẩu",
+    "confirmPassword": "Xác Nhận Mật Khẩu",
+    "role": "Vai Trò",
+    "department": "Phòng Ban",
+    "customRole": "Vai Trò Tùy Chỉnh",
+    "knowledgeType": "Loại Kiến Thức",
+    "departments": "Phòng Ban",
+    "scope": "Phạm Vi",
+    "global": "Toàn Cục",
+    "workspace": "Không Gian",
+    "enterName": "Nhập tên",
+    "enterEmail": "Nhập email",
+    "enterPassword": "Nhập mật khẩu",
+    "selectRole": "Chọn vai trò",
+    "selectDepartment": "Chọn phòng ban",
+    "optionalDescription": "Mô tả tùy chọn...",
+    "min6Chars": "Tối thiểu 6 ký tự",
+    "min8Chars": "Tối thiểu 8 ký tự"
+  }
+}

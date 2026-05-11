@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { api } from "@/lib/api";
+import { useI18n } from "@/lib/i18n";
 import { PageHeader } from "@/components/shared/page-header";
 import { Button } from "@/components/ui/button";
 import { DepartmentCards } from "@/components/departments/department-cards";
@@ -15,6 +16,7 @@ export type Department = {
 };
 
 export default function DepartmentsPage() {
+  const { tPages } = useI18n();
   const [departments, setDepartments] = useState<Department[]>([]);
   const [loading, setLoading] = useState(true);
   const [dialogOpen, setDialogOpen] = useState(false);

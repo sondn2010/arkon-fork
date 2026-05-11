@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { api } from "@/lib/api";
 import { useAuth } from "@/lib/auth";
+import { useI18n } from "@/lib/i18n";
 import { PageHeader } from "@/components/shared/page-header";
 import { Button } from "@/components/ui/button";
 import { ProjectList } from "@/components/projects/project-list";
@@ -23,6 +24,7 @@ export type Project = {
 
 export default function DashboardPage() {
   const { user, hasPermission } = useAuth();
+  const { tPages } = useI18n();
   const canManage = hasPermission("workspaces.create");
 
   const [projects, setProjects] = useState<Project[]>([]);
@@ -82,8 +84,8 @@ export default function DashboardPage() {
   return (
     <>
       <PageHeader
-        title="Dashboard"
-        description="Manage projects and customer engagements — each with its own team and documents."
+        title={tPages("dashboard", "title")}
+        description={tPages("dashboard", "description")}
         action={
           canManage ? (
             <Button
@@ -91,7 +93,7 @@ export default function DashboardPage() {
               className="bg-primary text-primary-foreground hover:bg-primary/90"
             >
               <span className="material-symbols-outlined text-base mr-1">add</span>
-              New Workspace
+              {tPages("dashboard", "newWorkspace")}
             </Button>
           ) : undefined
         }
